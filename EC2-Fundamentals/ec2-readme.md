@@ -113,3 +113,8 @@ Can be used for control over the EC2 instance placement strategy.
 - Can create ENIs independently from and attach them on the fly(move them) on EC2 instances for failover.
 
 ## EC2 Hibernate
+
+- The in-memory (RAM) state is preserved.
+- The instance boot is much faster(the OS is not stopped/restarted).
+- Underthe hood, the RAM state is written to a file in the root EBS volume.
+- The root EBS volume must be encrypted.
