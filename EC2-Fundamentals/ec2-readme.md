@@ -111,3 +111,5 @@ Can be used for control over the EC2 instance placement strategy.
 - Mac address.
 - Bound to specific AZ
 - Can create ENIs independently from and attach them on the fly(move them) on EC2 instances for failover.
+
+## EC2 Hibernate
