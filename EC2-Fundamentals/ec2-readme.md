@@ -118,3 +118,17 @@ Can be used for control over the EC2 instance placement strategy.
 - The instance boot is much faster(the OS is not stopped/restarted).
 - Underthe hood, the RAM state is written to a file in the root EBS volume.
 - The root EBS volume must be encrypted.
+
+- Use cases:
+  - long-runnig processing
+  - Saving the RAM state
+  - Services that take time to initialize
+
+### EC2 Hibernate - GOOD to KNOW
+
+- **supported instances families:** C3,C4,C5,I3,M3,M4,R3,R4,T2,T3.
+- **Instance RAM Size:** must be less than 150GB
+- **Instance Size:** Not supported for bare metal instances.
+- **AMIs:** Amazon linux2, linux AMI, Ubuntu, RHEL, CentOS and Windows.
+- **Root Volume:** Must be EBS, encrypted, not instance store and large, Available for On-demand, Reserved and spot instances.
+- Ans isntance cannot be hibernated more than 60days.
