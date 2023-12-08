@@ -90,18 +90,18 @@ Can be used for control over the EC2 instance placement strategy.
  These strategy can be defined using placement groups.
  Some of these strategies include;
 
-- **Cluster:** Clusters instances into a low-latency group in a single AZ. On the same Rack.
+- **Cluster:** Clusters instances into a low-latency group in a single AZ. On the same Rack. Node-to-Node communication that is typical of HPC applications.
 
-- **Spread:** Spreads instances across the underlying hardware i.e 7 isntances per group per AZ and it's good for critical applications.
+- **Spread:** Spreads instances across the underlying hardware i.e 7 isntances per group per AZ and it's good for critical applications. Different hardware. can spread across multiple AZs.
 
-- **Partition:** Spreads instances across many different partitions (which rely on different sets of racks) within an AZ. Scales to 100s of EC2 instances per group. (Hadoop, Cassandra, Kafka)
+- **Partition:** Spreads instances across many different partitions (which rely on different sets of racks) within an AZ or multiple AZs. Scales to 100s of EC2 instances per group. (Hadoop, Cassandra, Kafka). Distrbuted and replicated workloads. 7 partitions per AZ.
 
 ## Elastic Network Interface (ENI)
 
 - Logical component in a VPC that represents a vitual network card.
 - Used outside of EC2 instances.
 
-### ENI Attributes:
+### ENI Attributes
 
 - Have one Primary IPv4, one or more secondary IPv4.
 - One Elastic IPv4 per private IPv4.

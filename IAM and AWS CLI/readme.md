@@ -6,15 +6,18 @@
 
 - Some AWS services need to perform actions or task on your behalf. To do so, we need to assign permissions to AWS Services through **IAM Roles**.
 
-<img src="ec2.png" width="110%" height="50%">
+![ec2-image](ec2.png)
 
 - Some common Roles include;
+  
   <ol>
-  <li>EC2 Instance Role</li>
-  <li>Lambda Function Roles</li>
-  <li>Roles for Cloudformation</li>
-  </ol>
+   <li>EC2 Instance Role</li>
+   <li>Lambda Function Roles</li>
+   <li>Roles for Cloudformation</li>
+   </ol>
+
 ---
+
 ## IAM Credentials Report(Account-level)
 
 - This is a report that lists all the users belonging to your account and the status of their various credentials.
