@@ -98,8 +98,9 @@ Can be used for control over the EC2 instance placement strategy.
 
 ## Elastic Network Interface (ENI)
 
-- Logical component in a VPC that represents a vitual network card.
+- Logical component in a VPC that represents a **vitual network card**.
 - Used outside of EC2 instances.
+- Gives EC2 instances access to the network
 
 ### ENI Attributes
 
@@ -109,3 +110,4 @@ Can be used for control over the EC2 instance placement strategy.
 - One or more security groups.
 - Mac address.
 - Bound to specific AZ
+- Can create ENIs independently from and attach them on the fly(move them) on EC2 instances for failover.
