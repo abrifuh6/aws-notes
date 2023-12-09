@@ -46,7 +46,7 @@ An example is **m5.2xlarge** where
   - Authorised IP ranges - IPV4 and IPV6
   - Control both inbound and outbound network.
 
-<img src="./images/ec2-sg.png" width="100%" height="100">
+![ec2-security-group](./images/ec2-sg.png)
 
 ## EC2 Instances Purchasing Options
 
@@ -131,4 +131,4 @@ Can be used for control over the EC2 instance placement strategy.
 - **Instance Size:** Not supported for bare metal instances.
 - **AMIs:** Amazon linux2, linux AMI, Ubuntu, RHEL, CentOS and Windows.
 - **Root Volume:** Must be EBS, encrypted, not instance store and large, Available for On-demand, Reserved and spot instances.
-- Ans isntance cannot be hibernated more than 60days.
+- An isntance cannot be hibernated more than 60days.
