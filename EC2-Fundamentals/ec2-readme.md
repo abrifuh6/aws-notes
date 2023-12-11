@@ -132,3 +132,19 @@ Can be used for control over the EC2 instance placement strategy.
 - **AMIs:** Amazon linux2, linux AMI, Ubuntu, RHEL, CentOS and Windows.
 - **Root Volume:** Must be EBS, encrypted, not instance store and large, Available for On-demand, Reserved and spot instances.
 - An isntance cannot be hibernated more than 60days.
+
+## EC2 Instance Storage
+
+### What is EBS(Elastic Block Store) Volume?
+
+- EBS (Elastic Block Store) Volume is a network drive you can attach to your instances while the run.
+- Allows your instance to persist data even after termination.
+- Bound to specific AZ.
+- Likened to a "network USB stick".
+- Free tier: 30GB general type storage (ssd) or magnetic.
+- It's a network drive hence
+  - uses network to communicate, wh means ther might be some latency.
+  - can be detached from one instance and attached to another relatively quickly in case of fail over.
+- Have a provisioned capacity (size in GBs and IOPS)
+  - get billed for all the provisoned capacity
+  - you can increase the capacity of the drive over time.
