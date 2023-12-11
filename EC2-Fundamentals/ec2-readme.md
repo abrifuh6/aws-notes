@@ -148,3 +148,42 @@ Can be used for control over the EC2 instance placement strategy.
 - Have a provisioned capacity (size in GBs and IOPS)
   - get billed for all the provisoned capacity
   - you can increase the capacity of the drive over time.
+
+## EBS Snapshots
+
+- make a backup (snapshot) of your EBS volume at any given point in time.
+- Not necessary to detach volume before doing a snapshot but it's recommended.
+- Can copy snapshots accross AZ or Region.
+
+### EBS Snapshots Features
+
+- EBS snapshot archive
+  - move snapshot to an "archive tier" that is 75% cheaper
+  - takes about 24 to 72 hrs for restoring the archive
+
+- Recycle Bin for EBS Snapshots
+  - setup rules to retain deleted snapshots so you can recover them after an accidental deletion
+  - specify retention(from 1 day to 1 yr)
+
+- Fast Snapshot Restore
+  - Force full initialization of snapshot to have no latency on the first use. Costly ($$)
+
+## AMI (Amazon Machine Image)
+
+- AMI is customization of EC2 instance
+  - you add your own software, OS, monitoring
+  - faster boot/configuration time because all your software is pre-packaged
+
+- AMIs are built for specific regions (and can be copied from one region to another)
+- instances can be launched from 
+  - Public AMI: provided by AWS
+  - Owned AMI: managed and maintained by yourself
+  - AWS marketplace AMI
+
+## EC2 Instance Store
+
+- EBS volumes are network drives with good but limited performance.
+- If you need a high-performance hardware disk, use EC2 Instance Store.
+- Better I/O performance
+- EC2 Instance Store lose thier storage if they're stopped (ephemeral)
+- Good for buffer/ cache/ scratch data/ temporary content.
