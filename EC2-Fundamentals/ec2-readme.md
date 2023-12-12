@@ -213,3 +213,5 @@ Can be used for control over the EC2 instance placement strategy.
 - When you encrypt your EBS volume, you get the following;
   - Data at rest is encrypted inside the volume.
   - All data in flight between the instance and the volume is encrpyted.
+  - All snapshots are encrypted
+  - All volumes created from the snapshots are encrypted too.
