@@ -265,3 +265,33 @@ EBS encryption leverages keys from KMS (AES-256)
 - Goal is to survive datacenter loss.
 - HA can be passive(RDS multi-AZ)
 - HA can be active(for horizontal scaling)
+
+## Load Balancers
+
+- LBs are servers that forward traffic to multiple servers.
+
+### Why use LBs?
+
+- Spread load across multiple downstream isntances.
+- Expose a single point of acess(DNS) to your application
+- Seamlessly handle failures of downstream instances
+- Do regular healthchecks to your instances
+- Provide SSl termination(HTTPS) for your website
+- Enforce stickiness with cookies
+- High availability across zones
+- Seperate public traffic from private traffic.
+
+## Why use ELB(Elastic Load Balancer)?
+
+- An ELB is a managed Load Balancer.
+  - AWS guarantees that it will be working.
+  - AWS takes care of upgrades, maintainance, HA.
+  - AWS provides only a few configuration knobs.
+- It's integrated with many AWS offerings/services like EC2, EC2 Auto Scaling Groups, Amazon ECS, AWS cert Manager(ACM), CloudWatch, Route53, AWS WAF, AWS Global Accelerator.
+
+## Types of Load Balancers on AWS
+
+- **classic Load Balancer** (v1 - old generation) from 2009 -CLB
+- **Application Load Balancer** (v2 -new generation) - 2016 - ALB
+- **Network Load Balancer** (v2 -new genration) -2017 - NLB
+- **Gateway Load Balancer** (Operates at layer3 network layer -IP protocol) - 2020 - GWLB 
