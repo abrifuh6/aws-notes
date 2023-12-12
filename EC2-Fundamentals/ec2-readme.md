@@ -244,3 +244,24 @@ EBS encryption leverages keys from KMS (AES-256)
 
 - POSIX file system (~Linux) that has the standard file API.
 - File system scales automatically, pay-per-use, no capacity planning.
+
+## Scalabilty and High Availability
+
+- Scalability means that an application/system can handle greater workloads by adapting.
+- There are 2 kinds;
+  - Vertical Scalability
+  - Horizontal Scalability (Elasticity)
+
+- **Vertical Scalabilty;** means increasing the size of the instance.
+- Example is scaling your instance from t2.micro to t3.large
+- Common for non-distributed systems such as database. RDS and ElastiCache can scale vertically too.
+- Has hardware limits.
+
+- **Horizontal Scalabilty;** meansincreasing the number of instances/systems for your application.
+- Horizontal scaling implies distributed systems and common with modern web application.
+
+- **High Availabity;** Usually goes hand in hand with horizontal scaling.
+- High availability means running your application/system in at least 2 datacenters(==AZ)
+- Goal is to survive datacenter loss.
+- HA can be passive(RDS multi-AZ)
+- HA can be active(for horizontal scaling)
