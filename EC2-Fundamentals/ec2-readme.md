@@ -215,3 +215,6 @@ Can be used for control over the EC2 instance placement strategy.
   - All data in flight between the instance and the volume is encrpyted.
   - All snapshots are encrypted
   - All volumes created from the snapshots are encrypted too.
+- Encryption and Decryption are handled transparently(hence you have nothing to do).
+- Ecryption has minimal impact on latency
+EBS encryption leverages keys from KMS (AES-256)
