@@ -218,3 +218,29 @@ Can be used for control over the EC2 instance placement strategy.
 - Encryption and Decryption are handled transparently(hence you have nothing to do).
 - Ecryption has minimal impact on latency
 EBS encryption leverages keys from KMS (AES-256)
+- Copying an unecrypted snapshot allows encryption.
+- Snapshots of encrypted volumes are encrypted.
+
+### How can you encrypt an Unecrypted EBS Volume?
+
+- Create an EBS snapshot of the volume.
+- Encrypt the EBS snapshot (using copy)
+- Create new EBS volume from the snapshot(the volume will be encrypted)
+- Attach encrypted volume to the original instance.
+
+
+## Amazon EFS (Elastic File System)
+
+- Managed Network File System (NFS) that can be mounted on many EC2
+- EFS works with EC2 instances in multi-AZ
+- Highly available, scalable, expensive (3x gp2), pay per use.
+
+- Use cases are;
+  - content management, web serving, data sharing, wordpress
+- Uses NFSv4.1 protocol
+- Uses security group to control access to EFS.
+- Compatible with Linux based AMI (not windows)
+- Encryption at rest uaing KMS.
+
+- POSIX file system (~Linux) that has the standard file API.
+- File system scales automatically, pay-per-use, no capacity planning.
