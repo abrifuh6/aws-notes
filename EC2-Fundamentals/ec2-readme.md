@@ -207,3 +207,9 @@ Can be used for control over the EC2 instance placement strategy.
   - Applications must manage concurrent write operations.
 - Up to 16 EC2 instances at a time.
 - Must use file system that's cluster-aware (not XFS,EXT4 etc)
+
+## EBS Encryption
+
+- When you encrypt your EBS volume, you get the following;
+  - Data at rest is encrypted inside the volume.
+  - All data in flight between the instance and the volume is encrpyted.
