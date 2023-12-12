@@ -187,3 +187,13 @@ Can be used for control over the EC2 instance placement strategy.
 - Better I/O performance
 - EC2 Instance Store lose thier storage if they're stopped (ephemeral)
 - Good for buffer/ cache/ scratch data/ temporary content.
+
+### EBS Volume types
+
+- EBS volumes come in 6types
+  - **gp2/gp3 (SSD)**: general purpose SSD volume. Balancesprice and performance for a wide variety of workloads.
+  - **io1/io2 (SSD)**: Highest-performance SSD volume for mission-critical low-latency or high-throughput workloads.
+  - **st1 (HDD)**: Low cost HDD volume designed for frequently accessed, throughput-intensive workloads.
+  - **sc1 (HDD)**: Lowest cost HDD volume designed for less frequently accessed workloads.
+
+- EBS volumes are characterized in size | throughput | IOPS (I/O Ops Per Sec)
