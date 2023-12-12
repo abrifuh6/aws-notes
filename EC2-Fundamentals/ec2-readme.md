@@ -197,3 +197,11 @@ Can be used for control over the EC2 instance placement strategy.
   - **sc1 (HDD)**: Lowest cost HDD volume designed for less frequently accessed workloads.
 
 - EBS volumes are characterized in size | throughput | IOPS (I/O Ops Per Sec)
+
+## EBS multi-Attach - io1/io2 family
+
+- Attach same EBS volume to multiple EC2 instances in the same AZ
+- Each instance have full read and write permissions to the high-performance volume.
+- Use Case;
+  - Achieve higher application availability in clustered linux applications (ex: Teradata)
+  - Applications must manage concure
