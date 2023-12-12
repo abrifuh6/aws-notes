@@ -204,4 +204,6 @@ Can be used for control over the EC2 instance placement strategy.
 - Each instance have full read and write permissions to the high-performance volume.
 - Use Case;
   - Achieve higher application availability in clustered linux applications (ex: Teradata)
-  - Applications must manage concure
+  - Applications must manage concurrent write operations.
+- Up to 16 EC2 instances at a time.
+- Must use file system that's cluster-aware (not XFS,EXT4 etc)
