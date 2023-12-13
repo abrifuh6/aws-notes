@@ -303,3 +303,19 @@ EBS encryption leverages keys from KMS (AES-256)
 - Can be used to load balance to multiple applications on the same machine(eg:containers like ECS)
 - Support for HTTP/2 and WebSocket
 - Supports redirect (HTTP to HTTPS at the load balancer level)
+- Routing tables to different target groups:
+  - Routing based on path in URL (example.com/users & example.com/posts)
+  - Routing based on hostname in URL(one.example.com & other.example.com)
+  - Routing based on Query String, Headers(example.com/users?id=123&order=false)
+
+- ALBs are great for microservices & container-based application(eg; Docker & ECS)
+- Has port mapping feature to redirect to a dynamic port in ECS
+
+![ALB-Image](/IAM%20and%20AWS%20CLI/ALB.png)
+
+### ALB Target Groups
+
+- EC2 Instances(managed by ASG) - HTTP
+- ECS tasks (managed by ECS itself) - HTTP
+- Lambda functions - HTTP request is translated into a JSON event
+- IP Addresses - must be private IPs.
