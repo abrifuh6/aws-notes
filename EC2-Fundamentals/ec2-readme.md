@@ -319,3 +319,5 @@ EBS encryption leverages keys from KMS (AES-256)
 - ECS tasks (managed by ECS itself) - HTTP
 - Lambda functions - HTTP request is translated into a JSON event
 - IP Addresses - must be private IPs.
+- ALB can route to multiple target groups
+- Health checks are at the target group level.
