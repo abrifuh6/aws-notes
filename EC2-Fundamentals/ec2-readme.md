@@ -294,4 +294,12 @@ EBS encryption leverages keys from KMS (AES-256)
 - **classic Load Balancer** (v1 - old generation) from 2009 -CLB
 - **Application Load Balancer** (v2 -new generation) - 2016 - ALB
 - **Network Load Balancer** (v2 -new genration) -2017 - NLB
-- **Gateway Load Balancer** (Operates at layer3 network layer -IP protocol) - 2020 - GWLB 
+- **Gateway Load Balancer** (Operates at layer3 network layer -IP protocol) - 2020 - GWLB
+
+## Application  Load Balancer (v2)
+
+- ALB is a layer 7(HTTP)
+- Load balancing to multiple HTTP applications across machines(target groups)
+- Can be used to load balance to multiple applications on the same machine(eg:containers like ECS)
+- Support for HTTP/2 and WebSocket
+- Supports redirect (HTTP to HTTPS at the load balancer level)
