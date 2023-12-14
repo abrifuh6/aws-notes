@@ -336,3 +336,8 @@ EBS encryption leverages keys from KMS (AES-256)
 - IP addresses
 - Application load balancer
 - Health checks support the TCP, HTTP, and HTTPS protocols
+
+## Gateway Load Balancer(GWLB)
+
+- Deploy, scale and manage a fleet of 3rd party network virtual appliances in AWS
+- Examples include: Firewalls, Intrusion Detection and prevention systems, Deep Packet Inspection Systems, payload manipulation
