@@ -341,3 +341,8 @@ EBS encryption leverages keys from KMS (AES-256)
 
 - Deploy, scale and manage a fleet of 3rd party network virtual appliances in AWS
 - Examples include: Firewalls, Intrusion Detection and prevention systems, Deep Packet Inspection Systems, payload manipulation
+- Operates at layer 3(Network Layer) IP Packets.
+- Combines the following Functions:
+  - Transparent Network Gateway - single entry/exit for all traffic
+  - Load Balancer - Distributes traffic to your virtual appliances.
+- Uses GENEVE protocol on port 6081
