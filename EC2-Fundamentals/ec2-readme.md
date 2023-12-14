@@ -351,3 +351,5 @@ EBS encryption leverages keys from KMS (AES-256)
 
 - EC2 instances
 - IP addresses which must be private IPs
+
+## Sticky Sessions (Session Affinity)
