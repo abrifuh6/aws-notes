@@ -321,3 +321,8 @@ EBS encryption leverages keys from KMS (AES-256)
 - IP Addresses - must be private IPs.
 - ALB can route to multiple target groups
 - Health checks are at the target group level.
+
+## Network load Balancer
+
+- It's a layer 4 
+  - forward TCP and UDP traffic to your instances
