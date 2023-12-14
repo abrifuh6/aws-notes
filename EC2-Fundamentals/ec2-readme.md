@@ -326,3 +326,13 @@ EBS encryption leverages keys from KMS (AES-256)
 
 - It's a layer 4 
   - forward TCP and UDP traffic to your instances
+  - High performance compared to the ALB and handles millions of requests per second.
+  - less latency ~100ms(vs 400ms for ALB)
+- NLB has one static IP per AZ and supports assinging Elastic IP(helps in whitelisting specific IP)
+
+### NLB target groups
+
+- EC2 instances
+- IP addresses
+- Application load balancer
+- Health checks support the TCP, HTTP, and HTTPS protocols
