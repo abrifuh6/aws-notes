@@ -346,3 +346,8 @@ EBS encryption leverages keys from KMS (AES-256)
   - Transparent Network Gateway - single entry/exit for all traffic
   - Load Balancer - Distributes traffic to your virtual appliances.
 - Uses GENEVE protocol on port 6081
+
+### GWLB target groups
+
+- EC2 instances
+- IP addresses which must be private IPs
