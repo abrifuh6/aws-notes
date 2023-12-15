@@ -378,4 +378,5 @@ EBS encryption leverages keys from KMS (AES-256)
 ## Elastic Load Balancer - SSL(secure sockets layer) Certificates
 
 - An SSL Certificate allows traffic between your clients and load balancer to be encrypted in transit(in-flight encryption)
--
+- **SSL** refers to Secure Sockets Layer, used to encrypt connections
+- **TLS** refers to Transport Layer Security, which is newer version.
