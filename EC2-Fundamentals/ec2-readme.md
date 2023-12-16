@@ -585,7 +585,9 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - Use cases are:
   - fraud detection, ads targeting, sentiment analysis, product recommendations.
 
-## RDS Backups 
+## Backups
+
+### RDS Backups
 
 - Automated backups:
   - Daily full backup of database (during the backup window)
@@ -596,3 +598,24 @@ Managed Oracle and Microsoft SQL server with OS and database customization
   - Manually triggered by the user
   - Retention of backup for as long as you want
 - Trick: in a stopped RDS database, you will pay for storage. fi you plan on stopping it for a long time, you should snapshot and restore instead.
+
+### Aurora Backups
+
+- Automated backups
+  - 1 to 35 days (cannot be disabled)
+  - point-in-time recovery in that timeframe
+
+- Manual DB Snapshots
+  - Manually triggered by user
+  - Retentions of backup for as long as you want.
+
+## RDS & Aurora Restore Options
+
+- Restoring a RDS / Aurora backup or a snapshot creates a new db
+
+- Restoring MySQL RDS database from S3
+  - Create a backup of your on-premises db
+  - Store it on Amazon S3
+  - Restore the backup file onto a new RDS instance running MySQL
+
+- Restoring MySQL Aurora cluster from S3
