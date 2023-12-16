@@ -486,3 +486,14 @@ EBS encryption leverages keys from KMS (AES-256)
 - in AWS, there's always a network cost when data goes from one AZ to another
 - within the same region, AWS charges no fee for your read replicas in different AZs.
 - There's a fee for read replicas in different AZs found on different regions.
+
+### RDS Multi-AZ (Disaster Recovery)
+
+- SYNC replication is established in a standby DB in a different AZ.
+- One DNS name for both SB instances so that in case of a disaster, there's an automatic failover.
+- Increase availability
+- Failover in case of loss of AZ, loss of network, instance or storage failure.
+- Not used for scaling
+
+![rds-read-replicas](/IAM%20and%20AWS%20CLI/RDS-Multi.png)
+
