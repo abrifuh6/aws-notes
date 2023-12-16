@@ -469,3 +469,20 @@ EBS encryption leverages keys from KMS (AES-256)
 
 - Helps increase storage on your RDS DB instance dynamically
 - When RDS detects you are running out of free DB storage, it scales automatically.
+- You need to set a max storage threshold
+
+## RDS Read Replicas for read scalability
+
+- Read replicas helps to scale your reads.
+- can have up to 15 read replicas ehich can be within same AZ, cross AZ and cross region
+- Replication is ASYNC, so reads are eventually consistent.
+- Read repicas can be promoted to their own DB
+- Applications must update the connection string to leverage read replicas.
+
+![rds-read-replicas](/IAM%20and%20AWS%20CLI/RSD-replica.png)
+
+## RDS Read Replicas - Network Cost
+
+- in AWS, there's always a network cost when data goes from one AZ to another
+- within the same region, AWS charges no fee for your read replicas in different AZs.
+- There's a fee for read replicas in different AZs found on different regions.
