@@ -684,3 +684,20 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - The instance retrieves the data and the user is already logged in.
 
 ![user-session-cache](/IAM%20and%20AWS%20CLI/user-session-cache.png)
+
+## ElastiCache - Cache Security
+
+- ElastiCache supports IAM Authentication for Redis
+- IAM policies on ElastiCache are only used for AWS API-level security.
+- **Redis AUTH**
+  - You can set a "password/token" when you create a Redis cluster
+  - Extra level  of security for your cache (on top of security group)
+  - Support SSL in flight encryption
+- **Memcached**
+  - Supports SASL-based authentication (advanced)
+
+## Patterns of ElastiCache
+
+- **Lazy loading:** All the read data is cached, data can be stale in store
+- **Write through:** Adds or update data in the cache when wriiten to a DB( no stale data)
+- **Session Store:** Stores temporary session data in a cache(using TTL feature)
