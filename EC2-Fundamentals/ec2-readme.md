@@ -437,3 +437,6 @@ EBS encryption leverages keys from KMS (AES-256)
   - when cloudwatch alarm is triggered(example cpu > 70%), then add 2 units or (CPU < 30%), then remove 1 instance.
 - Scheduled Actions
   - Anticipate a scaling based on known usage patterns
+- Predictive scaling
+  - Using forcasting
+   
