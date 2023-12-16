@@ -518,3 +518,43 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - Aurora can have up to 15 replicas and the replication process is faster than MySQL (sub 10 ms replica lag)
 - Instantaneous failover. It's HA native.
 - It's cost more than RDS (20% more) - but is more efficient
+
+### Aurora HA an Read Scaling
+
+- 6 copies of your data across 6 AZs
+  - 4 copies out of 6 need for writes
+  - 3 outof 6 copies needed for reads
+  - Self healing with peer-to-peer replication
+  - Storage is striped across 100s of volumes.
+- One Aurora instance takes writes (master)
+- Automated failover for master in less than 30 secs
+- Master + up to 15 Aurora read replicas serve reads
+- Supports cross region replication.
+
+### Aurora DB Cluster
+
+![aurora-cluster](/IAM%20and%20AWS%20CLI/aurora-cluster.png)
+
+## Aurora Replicas
+
+### - Auto Scaling
+
+- Writer endpoint attached to the primary DB
+- Reader endpoint on the read replicas, which can be extended as the read replicas can be scaled out.
+
+![aurora-asg](/IAM%20and%20AWS%20CLI/aurora-asg.png)
+
+### - Custom Endpoints
+
+- Usually when you have different types of Read Replicas.
+- You can define a subset of your Aurora Instances as a Custom Endpoint
+  - Example willbe to  run analytical queries on specific replicas.
+- The reader endpoint is genereally not used after defing Custom Endpoints
+
+![custom-endpoint](/IAM%20and%20AWS%20CLI/custom-endpoint.png)
+
+## Aurora Serverless
+
+- Automated database instantiation and auto-scaling based on actual usage.
+- Good for infrequent, intermittent or unpredictable workloads
+- No capacity planing needed and pay per second can be more cost effective.
