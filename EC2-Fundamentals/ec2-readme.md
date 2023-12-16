@@ -558,3 +558,18 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - Automated database instantiation and auto-scaling based on actual usage.
 - Good for infrequent, intermittent or unpredictable workloads
 - No capacity planing needed and pay per second can be more cost effective.
+
+![aurora-serverless](/IAM%20and%20AWS%20CLI/aurora-serverless.png)
+
+## Global Aurora
+
+- Aurora Cross Region Read Replicas:
+  - Useful for disaster recovery
+  - Simple to put in place
+- Aurora Global Database (recommended):
+  - 1 Primary region (read/write)
+  - Up to 5 secondary (read-only) regions, replication lag is less than 1 second
+  - Up to 16 Read Replicas per secondary region
+  - Helps in decreasing latency
+  - Promoting another region (for disaster recovery) has an RTO < 1 min
+  - Typical cross-region replication taks less than 1 second
