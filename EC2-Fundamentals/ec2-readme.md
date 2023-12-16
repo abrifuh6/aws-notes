@@ -427,3 +427,13 @@ EBS encryption leverages keys from KMS (AES-256)
   - Load Balancer Information
 - Has a min and max size
 - Scaling Policies using cloudwatch alarms
+
+## ASG - Dynamic Scaling Policies
+
+- Target tracjing scaling
+  - Most simple and easy to setup
+  - Example; I want the average ASG CPU to stay at around 40%
+- Simple/Step Scaling
+  - when cloudwatch alarm is triggered(example cpu > 70%), then add 2 units or (CPU < 30%), then remove 1 instance.
+- Scheduled Actions
+  - Anticipate a scaling based on known usage patterns
