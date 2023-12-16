@@ -613,9 +613,22 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 
 - Restoring a RDS / Aurora backup or a snapshot creates a new db
 
-- Restoring MySQL RDS database from S3
+- **Restoring MySQL RDS database from S3**
   - Create a backup of your on-premises db
   - Store it on Amazon S3
   - Restore the backup file onto a new RDS instance running MySQL
 
-- Restoring MySQL Aurora cluster from S3
+- **Restoring MySQL Aurora cluster from S3**
+  - Create a backup of your on-prem db using Percona CtraBackup
+  - Store the backup file on Amazon S3
+  - Restore the backup file onto a new Aurora cluster running MySQL
+
+## Auro Database Cloning
+
+- You can create a new Aurora DB cluster form an existing one.
+- Faster than snapshot and restore
+- Uses *copy-on-write* protocol
+  - Initially, the new DB cluster uses th same data volume as the original DB cluster (fast and efficient - no copying is needed)
+  - when updates are made to the new DB cluster data, then additonal storage is allocated and the data is copied to be seperated
+- Very fast and cost-effective
+- Useful to create a "staging" database from a "production" db without impacting the production database.
