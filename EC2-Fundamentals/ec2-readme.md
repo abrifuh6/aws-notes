@@ -380,3 +380,50 @@ EBS encryption leverages keys from KMS (AES-256)
 - An SSL Certificate allows traffic between your clients and load balancer to be encrypted in transit(in-flight encryption)
 - **SSL** refers to Secure Sockets Layer, used to encrypt connections
 - **TLS** refers to Transport Layer Security, which is newer version.
+- Public SSL certs are issued by certificate authorities(CA) for example, comodo,symantec, Godaddy, GlobalSign, Digicert, Letsencrypt etc.
+- Load balancer uses an X.509 certificate (SSL/TLS server cert.)
+
+### Server Name Indication (SNI)
+
+- Solves the problem of loading multiple SSL certificates onto one web server(to serve multiple websites.)
+- It's a newer protocol that requires the client to indicate the hostname of the server in the initial SSL handshake. The server will find the certificate, or return the default one.
+
+**Note:**
+
+- *Only works for ALB & NLB(newer generation), cloudfront.*
+
+## Connection Draining
+
+### - Feature Naming
+
+- Connection Draining for CLB
+- Deregistration Delay - for ALB & NLB
+
+- Time to complete "in-flight requests" while the instance is de-registered or unhealthy.
+- Stops sending new requests to the EC2 instance which is deregistering.
+- Between 1 to 3600 seconds (default: 300seconds)
+
+## What's an Auto Scaling Group?
+
+- The use of an ASG is to :
+  - Scale out(increase) EC2 instances to match increased workloads
+  - Scale in(decrease) EC2 instances to match decreased workloads
+  - Ensure min and max numbers of EC2 instances is running.
+  - Automatically register new instances to a load balancer
+  - Re-create an EC2 instance in case a previous one is terminated because it was unhealthy.
+- ASGs are free(only pay for the underlying instances)
+
+### ASG Attributes
+
+- A lauch Template is what is needed to automatically spin up new instances in your ASG
+- It comprises of;
+  - AMI + Instance Type
+  - EC2 user Data
+  - EBS Volumes
+  - Security Groups
+  - SSH Key Pair
+  - IAM Roles for your EC2 Instances
+  - Network + Subnets Information
+  - Load Balancer Information
+- Has a min and max size
+- Scaling Policies using cloudwatch alarms
