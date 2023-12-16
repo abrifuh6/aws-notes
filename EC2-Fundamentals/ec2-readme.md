@@ -669,3 +669,18 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - AWS is responsible fo the OS patches, maintainance, optimization, setup, configuration, monitoring,failure recovery and backups.
 - Using ElastiCache involves heavy application code changes.
 
+### ElastiCache Solution Architechture - DB Cache
+
+- Application queries ElastiCache, if not available, gets from RDS and store in ElastiCache.
+- Cache must have an invalidation strategy to make sure only the most current data is used there.
+
+![db-cache](/IAM%20and%20AWS%20CLI/db-cache.png)
+
+#### ElastiCache Solution Architechture - User Session Store
+
+- user logs into any of your application
+- The app writes the session data into  ElastiCache
+- The user hits another instance of your app.
+- The instance retrieves the data and the user is already logged in.
+
+![user-session-cache](/IAM%20and%20AWS%20CLI/user-session-cache.png)
