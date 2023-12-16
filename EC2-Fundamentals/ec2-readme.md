@@ -497,3 +497,19 @@ EBS encryption leverages keys from KMS (AES-256)
 
 ![rds-read-replicas](/IAM%20and%20AWS%20CLI/RDS-Multi.png)
 
+### RDS Custom
+
+Managed Oracle and Microsoft SQL server with OS and database customization
+
+- You can access the underlying database and OS so you can
+  - Configure settings
+  - Install patches
+  - Enable native features
+  - Access the underlying EC2 instance using SSH or SSM Session Manager
+
+- De-activate Automation Mode to perform your customization, better take snapshots before.
+
+## Amazon Aurora
+
+- Aurora is a proprietary technology from AWS(not open-sourced)
+- Postgres and MySQL are now supported as Aurora DB(means your drivers will work as if Aurora was a Postgres or MySQL db)
