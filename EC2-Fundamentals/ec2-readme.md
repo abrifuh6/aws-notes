@@ -439,4 +439,33 @@ EBS encryption leverages keys from KMS (AES-256)
   - Anticipate a scaling based on known usage patterns
 - Predictive scaling
   - Using forcasting
-   
+
+## AWS RDS Overview
+
+- RDS = Relational Database Service
+- It's a managed DB service for DB use SQL as a query language
+- It allows you to create databases in the cloud that are managed by AWS. These include;
+  - Postgres
+  - MySQL
+  - MariaDB
+  - Oracle
+  Microsoft SQL Server
+  - Aurora (AWS Proprietary database)
+
+### Advantage of using AWS RDS vs Self-Deployed RDS on EC2 or VM
+
+- RDS is a managed service:
+  - automated provisioning and OS patching.
+  - Continuous backups and restore to specific timestamps (point in time restore)
+  - Monitoring dashboards
+  - Read replicas for improved read performance
+  - Multi AZ setup for disaster recovery(DR)
+  - Maintainance windows for upgrades
+  - Scaling capability (both vertical and horizontal)
+  - Storage backed by EBS (gp2 or io1)
+- BUT you can't SSH into your instances
+
+### RDS - Storage Auto Scaling
+
+- Helps increase storage on your RDS DB instance dynamically
+- When RDS detects you are running out of free DB storage, it scales automatically.
