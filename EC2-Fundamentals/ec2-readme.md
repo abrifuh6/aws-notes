@@ -573,3 +573,26 @@ Managed Oracle and Microsoft SQL server with OS and database customization
   - Helps in decreasing latency
   - Promoting another region (for disaster recovery) has an RTO < 1 min
   - Typical cross-region replication taks less than 1 second
+
+### Aurora Machine Learning
+
+- Enables you to add ML-based predictions to your applications via SQL
+- Simple, optimized, and secure integration between Aurora and AWS ML services
+- Supported services are
+  - AWS sagemaker (use with any ML model)
+  - Amazon Comprehend (for sentiment analysis)
+- You don't need to have ML experience
+- Use cases are:
+  - fraud detection, ads targeting, sentiment analysis, product recommendations.
+
+## RDS Backups 
+
+- Automated backups:
+  - Daily full backup of database (during the backup window)
+  - Transactions logs are backed-up by RDS every 5mins.
+  - Ability to restore to any point in time (from oldest backup to 5 min ago)
+  - 1 to 35 days of retention, set 0 to disable automated backups
+- Manual DB Snapshots
+  - Manually triggered by the user
+  - Retention of backup for as long as you want
+- Trick: in a stopped RDS database, you will pay for storage. fi you plan on stopping it for a long time, you should snapshot and restore instead.
