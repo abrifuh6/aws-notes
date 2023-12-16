@@ -632,3 +632,40 @@ Managed Oracle and Microsoft SQL server with OS and database customization
   - when updates are made to the new DB cluster data, then additonal storage is allocated and the data is copied to be seperated
 - Very fast and cost-effective
 - Useful to create a "staging" database from a "production" db without impacting the production database.
+
+## RDS & Aurora Security
+
+- **At-rest Encryption:**
+  - DB master and replicas encryption using AWS KMS(must be defined at launch time).
+  - If the master is not encrypted, the read replicas cannot be encrypted.
+  - But to ecrypt an un-encrypted DB, you have to go through a DB snapshot and restore as encrypted.
+- **In-flight encryption:**
+  - TLS-ready by default, use the AWS TLS root certificates client-side.
+- **IAM Authentication:**
+  - Can make use if IAM roles to login or connect to your database (instead of username/passwords).
+- **Security Groups:**
+  - Control network access to your RDS / Aurora DB
+- **No SSH Access:**
+  - Because RDS and Aurora are managed services, it doesn't provide ssh access except on *RDS Custom service*
+- **Audit Logs can be enabled** and sent to cloudwatch logs for longer retention
+
+## Amazon RDS Proxy
+
+- Fully managed DB proxy for RDS
+- Allows apps to pool and share DB connections established with the DB.
+- Improving db efficiency by reducing the stress on database resources (eg CPU, RAM) and minimize open connections(and timeouts.)
+- Serverless, autoscaling, highly available (multi-AZ)
+- Reduced RDS and Aurora failover time by up to 66%
+- Supports RDS (MySQL, PostgreSQL, MariaDB, MS SQL server) and Aurora (MySQL, PostgeSQL)
+- No code changes required for most apps
+- Enforce IAM Authentication for DB and securely store credentials in AWS Secrets Manager.
+- RDS Proxy is never publicly accessible (must be accessed from VPC).
+
+## ElastiCache Overview
+
+- Caches are in-memory databases with really high performance, low latency.
+- ElastiCache is to get managed Redis or Memcached
+- Helps reduce load off db for read intensive workloads and helps make your applications stateless.
+- AWS is responsible fo the OS patches, maintainance, optimization, setup, configuration, monitoring,failure recovery and backups.
+- Using ElastiCache involves heavy application code changes.
+
