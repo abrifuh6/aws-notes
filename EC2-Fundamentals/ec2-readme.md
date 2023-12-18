@@ -701,3 +701,22 @@ Managed Oracle and Microsoft SQL server with OS and database customization
 - **Lazy loading:** All the read data is cached, data can be stale in store
 - **Write through:** Adds or update data in the cache when wriiten to a DB( no stale data)
 - **Session Store:** Stores temporary session data in a cache(using TTL feature)
+
+## AWS Route53
+
+### DNS Terminologies
+
+- **Domain Registrar:** Godaddy, Amazon Route 53...
+- **DNS Records:** A, AAAA, CNAME, NS, ALIAS...
+- **Zone File:** contains our DNS records
+- **Name Server:** Resolves DNS queries (Authoritative or non-Authoritative)
+- **Top Level Domain(TLD):** .com, .us, .in, .gov, .org, ...
+- **Second Level Domain(SLD):** amazon.com, google.com,...
+
+![fqdn](/IAM%20and%20AWS%20CLI/domain.png)
+
+## How Does DNS Server Work?
+
+Below is a visual image of how DNS work.
+
+![dns-server](/IAM%20and%20AWS%20CLI/dns-server.png)
