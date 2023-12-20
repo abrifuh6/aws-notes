@@ -721,3 +721,4 @@ Below is a visual image of how DNS work.
 
 ![dns-server](/IAM%20and%20AWS%20CLI/dns-server.png)
 
+## Route 53 - Records TTL (Time To Live)
