@@ -794,4 +794,13 @@ example.com
   - **Latency is based on traffic between users and AWS regions**
   - Can be combined with health checks and has failover capacity.
 
-## 
+## Route 53 - Health Checks
+
+- HTTP Health checks are only for public resources
+- Health Check => Automated DNS Failover: there are different kinds 
+  - Health checks that monitor an endpoint(application, server, other AWS resources)
+  - Health checks that monitor other health checks (Calculated Health Checks)
+  - Health checks that monitors cloudwatch alarms (full control !!) eg: throttles of DynamoDB, alarms on RDS, custom metrics, (helpful for private resources)
+- Health Checks are integrated with CloudWatch mtrics.
+
+![health-check](/IAM%20and%20AWS%20CLI/health-check.png)
