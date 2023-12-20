@@ -722,3 +722,10 @@ Below is a visual image of how DNS work.
 ![dns-server](/IAM%20and%20AWS%20CLI/dns-server.png)
 
 ## Route 53 - Records TTL (Time To Live)
+
+- We don't want to query the DNS too often. So the client will cache the result of a query for the TTL of the record.
+
+- Higher TTL eg 24hr 
+  - Less traffic on Route 53
+  - Possibly outdated records
+
