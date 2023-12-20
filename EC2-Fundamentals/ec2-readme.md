@@ -735,3 +735,63 @@ Below is a visual image of how DNS work.
   - Easy to change records
 
 - **Except for Alias records, TTL is mandatory for each DNS record.**
+
+## CNAME vs Alias
+
+AWS resources (LB, Cloudfrint) expose an AWS hostname: *lb-1234.us-east-2.elb.amazonaws.com* and you want *myapp.mydomamain.com*
+
+- CNAME:
+  - points a hostname to any other hostname. eg: app.mydomain.com => web.blabla.com .
+  - **ONLY FOR NON ROOT DOMAIN (aka.something.mydomain.com)**
+
+- Alias:
+  - Points a hostname to an AWS Resource (app.mydomain.com => blalbla.amazonaws.com)
+  - Works for both ROOT DOMAIN and NON ROOT DOMAIN (aka mydomain.com)
+  - Free of charge
+  - Native healthcare capability within them.
+
+### Alias Records
+
+- Maps a hostname to an AWS resource
+- An extension to DNS functionality
+- Automatically recognizes changes in the resource's IP addresses
+- Unlike CNAME, it can be used for the top node of a DNS namespace (Zone Apex)eg
+example.com
+- Alias Record is always of type A/AAAA for aws resources (IPV4 / IPV6)
+- You can't set the TTL
+
+### Alias Records Targets
+
+- Elastic Load Balancers
+- CloudFront Distributions
+- API Gateway
+- Elastic Beanstalk environments
+- S3 websites
+- VPC interface Endpoints
+- Global Accelerator
+- Route 53 record in the same hosted zone
+
+## Routing Policies
+
+- **Simple Routing;**
+  
+  - Typically route traffic to a single resource
+  - can specify multiple values in the same record
+  - if multiple values are returned, a random one is chosen by the client.
+  - when alias is enabled, specify ony one AWS resource
+  - Can't be associated with health checks.
+
+- **Weighted Routing;**
+  - control number or % of request that go to a particular resource.
+  - DNS records must have the same name and type
+  - can be associated with health checks
+
+  ![weight-routing](/IAM%20and%20AWS%20CLI/weight-routing.png)
+
+- **Latency-based Routing;**
+  - Redirect to the resource that has the least latency close to us
+  - Super helpful when latency for users is priority
+  - **Latency is based on traffic between users and AWS regions**
+  - Can be combined with health checks and has failover capacity.
+
+## 
