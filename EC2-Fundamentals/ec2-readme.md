@@ -809,3 +809,11 @@ example.com
 
 - **Failover (Active-Passive)**
 ![failover](/IAM%20and%20AWS%20CLI/failover.png)
+
+- **Geolocation**
+  - Different from latency-based.
+  - **This routing is based on user location**
+  - Specify location by continent, country or by US state(if there's an overlapping, more precise location selected)
+  - Should create a "Default" record (in case there's no match on location)
+  - Use cases; website localization,restrict content distribution, load balancing.
+  - Can be associated with healthchecks
