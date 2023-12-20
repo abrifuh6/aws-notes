@@ -729,3 +729,9 @@ Below is a visual image of how DNS work.
   - Less traffic on Route 53
   - Possibly outdated records
 
+- Lower TTL eg; 60secs
+  - More traffic on route 53 ($$)
+  - Records are outdated for less time
+  - Easy to change records
+
+- **Except for Alias records, TTL is mandatory for each DNS record.**
