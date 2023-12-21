@@ -817,3 +817,26 @@ example.com
   - Should create a "Default" record (in case there's no match on location)
   - Use cases; website localization,restrict content distribution, load balancing.
   - Can be associated with healthchecks
+
+- **Geoproximity Routing**
+  - Allows you to route traffic to your resources based on the geographic location of users and resources.
+  - ability to shift more traffic to resources based on the defined bias
+  - To change the size of the geopgraphic region, specify bias values:
+    - To expand (1 to 99) - more traffic to the resource
+    - To shrink (1 to 99) - Less traffic to the resource
+  - Resources can be:
+    - AWS Resources (specify AWS region)
+    - Non-AWS Resources (specify Latitude and Longitude)
+  - You must use Route 53 Traffic Flow (advanced) to use this feature
+
+- **IP-based Routing**
+  - Routing is based on client IP addresses
+  - You provide a list of CIDRs for your clients and the corresponding endpoints/locations (user-IP-to-endpoint mappings)
+  - Use case; Optimize performance and reduce network costs eg: route end users from a particular ISP to a specific endpoint
+
+  ![ip-based-routing](/IAM%20and%20AWS%20CLI/ip-based-routing.png)
+
+- **Multi Value routing**
+  - Use when routing traffic to multiple resources and can be associated with health-checks
+  - Up to 8  healthy records are returned for each multi-value query and route 53 return multiple values/resources
+  - **Not a substitude for having an ELB.
