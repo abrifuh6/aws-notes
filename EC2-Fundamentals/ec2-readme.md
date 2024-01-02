@@ -839,4 +839,23 @@ example.com
 - **Multi Value routing**
   - Use when routing traffic to multiple resources and can be associated with health-checks
   - Up to 8  healthy records are returned for each multi-value query and route 53 return multiple values/resources
-  - **Not a substitude for having an ELB.
+  - **Not a substitude for having an ELB.**
+
+## Elastic Beanstalk
+
+- Developer centric view of deploying application on AWS.
+- Uses all the components we've seen before, such as; EC2, ASG, ELB, RDS etc.
+- Also a managed service.
+  - Automatically handles capacity provisioning, load balancing, scaling, application health monitoring, instance configuration
+  - Just the application code is the responsiblity of the developer.
+- We Still have full control over the configuration
+- Beanstalk is free but you pay for the underlying instances.
+
+### Elastic Beanstalk Components
+
+- **Application:** Collection of Elastic Beanstalk components (environments, versions, configurations, ...)
+- **Application Version:** An iteration of your application code
+- **Environment**
+  - Collection of AWS resources running an applciation version(only one applciation version at a time)
+  - *Tiers:* Web Server Environment Tier & Worker Environment Tier
+  - One can also create multiple environments(dev,test,prod,..)
