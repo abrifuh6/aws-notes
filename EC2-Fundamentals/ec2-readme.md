@@ -859,3 +859,6 @@ example.com
   - Collection of AWS resources running an applciation version(only one applciation version at a time)
   - *Tiers:* Web Server Environment Tier & Worker Environment Tier
   - One can also create multiple environments(dev,test,prod,..)
+  
+
+![beanstalk](/IAM%20and%20AWS%20CLI/beanstalk.png)
