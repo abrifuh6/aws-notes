@@ -948,4 +948,6 @@ example.com
         - Archieve Instant Access tier(automatic): objects not access for 90 days
         - Archieve Access tier(optional): configurable from 90 days to 700+ days
 
+        ![s3 storage classes](/IAM%20and%20AWS%20CLI/s3-storage.png)
+
 - **You can use s3 lifecycle configurations to move objects between the classes above.**
