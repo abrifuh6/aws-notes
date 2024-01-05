@@ -951,3 +951,18 @@ example.com
         ![s3 storage classes](/IAM%20and%20AWS%20CLI/s3-storage.png)
 
 - **You can use s3 lifecycle configurations to move objects between the classes above.**
+
+### Amazon S3 LifeCylce Rules
+
+- **Transition Actions**
+  - configure objects to transition to another storage class
+    - Move object to standard IA class 60 days after creation
+    - Move to Glacier for archiving after 6months
+
+- **Expiration Actions**
+  - Configure Objects to expire(delete) after a certain period
+    - Access log files can be set to delete after a 365 days
+    - Can be used to delete old versions of files(if versioning is enabled)
+    - can be used to delete incomplete Multi-Part uploads
+  - Rules can be created for certain prfix (example:s3://mybucket/mp3/*)
+  - Rules can be created for certain object Tags (example:Department:Finance) 
