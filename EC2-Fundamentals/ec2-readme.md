@@ -859,6 +859,38 @@ example.com
   - Collection of AWS resources running an applciation version(only one applciation version at a time)
   - *Tiers:* Web Server Environment Tier & Worker Environment Tier
   - One can also create multiple environments(dev,test,prod,..)
-  
+
 
 ![beanstalk](/IAM%20and%20AWS%20CLI/beanstalk.png)
+
+## Amazon S3
+
+### Use cases:
+
+- For backup and storage
+- Disaster Recovery
+- Archive
+- Hybrid Cloud Storage
+- Application Hosting
+- Media Hosting
+- Data Lakes & big data analytics
+- Software delivery
+
+### Amazon S3 Buckets
+
+- S3 allows you to store objects(files) in buckets (directories)
+- S3 Buckets must have a **globally unique name** (across all regions and all accounts)
+- Looks like a global service but buckets are created in regions and are defined at the region level
+- Naming Convention
+  - No uppercase, No underscore
+  - 3 to 63 characters long
+  - Not an IP
+  - Must start with lowercase letter or number
+  - Must NOT start with prefix **xn--**
+  - Must NOT end with end with suffix **-s3alias**
+
+### Amazon S3 Objects
+
+- Object values are the content of the body:
+  - Max Object size is 5TB(5000GB)
+  - If uploading more than 5GB, must use "multi-part upload"
