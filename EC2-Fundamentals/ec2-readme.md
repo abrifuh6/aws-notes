@@ -906,3 +906,15 @@ example.com
 
 - **Encryption:**
   - S3 buckets can be encrypted using encryption keys.
+
+## S3 Storage Classes
+
+1. Amazon S3 Standard -General Purpose
+2. Amazon S3 Standard-infrequent access (IA)
+3. Amazon S3 One Zone-Infrequent Access
+4. Amazon S3 Glacier Instant Retrieval
+5. Amazon S3 Glacier Flexible Retrieval
+6. Amazon S3 Glacier Deep Archive
+7. Amazon S3 Intelligent Tiering
+
+- **You can use s3 lifecycle configurations to move objects between the classes above.**
