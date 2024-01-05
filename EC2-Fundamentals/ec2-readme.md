@@ -909,8 +909,19 @@ example.com
 
 ## S3 Storage Classes
 
-1. Amazon S3 Standard -General Purpose
-2. Amazon S3 Standard-infrequent access (IA)
+1. **Amazon S3 Standard -General Purpose:**
+   - 99.99% availability
+   - Used for frequenntly accessed data
+   - Low latency and high throughput
+   - Sustain 2 concurrent facility failures
+   - Use case is; Big data analytics, Mobile & gaming applications, content distibution.
+
+2. **Amazon S3 Standard-infrequent access (IA)**
+    - For data less frequently accessed but requires rapid access when needed.
+    - Lower cost than s3 standard but cost on retrieval.
+    - 99.99% availability
+    - Use case; Disaster Recovery(DR) snd backups.
+    
 3. Amazon S3 One Zone-Infrequent Access
 4. Amazon S3 Glacier Instant Retrieval
 5. Amazon S3 Glacier Flexible Retrieval
