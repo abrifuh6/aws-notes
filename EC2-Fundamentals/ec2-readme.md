@@ -926,8 +926,11 @@ example.com
     - High durability (99.999%) in a single AZ, data lost when AZ is destroyed
     - 99.5% availability
     - Use case; storing secondary backup copies of on-premise data, or data you can recreate.
+
+4. **Amazon S3 Glacier Instant Retrieval**
+    - Millisecond retrieval, great for data accessed once a quarter
+    - Minimum storage duration of 90 days
     
-4. Amazon S3 Glacier Instant Retrieval
 5. Amazon S3 Glacier Flexible Retrieval
 6. Amazon S3 Glacier Deep Archive
 7. Amazon S3 Intelligent Tiering
