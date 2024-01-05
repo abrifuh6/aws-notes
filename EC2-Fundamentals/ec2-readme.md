@@ -938,7 +938,14 @@ example.com
 6. **Amazon S3 Glacier Deep Archive**
     - Good for long term storage.
     - Standard(12 hrs), Bulk (48 hrs)
-    
-7. Amazon S3 Intelligent Tiering
+
+7. **Amazon S3 Intelligent Tiering**
+    - Small monthly monitoring and auto-tiering fee
+    - Moves objects automatically between access tiers based on usage
+    - There are no retrieval charges in S3 intelligent-Tiering
+        - Frequent Access tier(automatic): default tier
+        - Infrequent Access tier(automatic): objects not accessed for 30days
+        - Archieve Instant Access tier(automatic): objects not access for 90 days
+        - Archieve Access tier(optional): configurable from 90 days to 700+ days
 
 - **You can use s3 lifecycle configurations to move objects between the classes above.**
