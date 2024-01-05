@@ -894,3 +894,15 @@ example.com
 - Object values are the content of the body:
   - Max Object size is 5TB(5000GB)
   - If uploading more than 5GB, must use "multi-part upload"
+
+### Amazon S3 Security
+
+- **User-based:**
+  - **IAM Roles** determine which API calls should be allowed for a specific user from IAM.
+- **Resource-Based:**
+  - **Bucket Policies** - bucket wide rules from the s3 console(allows cross account)
+  - **Object Access Control List(ACL)** - fine grain(can be disabled)
+  - **Bucket Access Control List(ACL)** - less common (can be disabled)
+
+- **Encryption:**
+  - S3 buckets can be encrypted using encryption keys.
