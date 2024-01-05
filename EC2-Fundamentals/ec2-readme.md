@@ -930,9 +930,15 @@ example.com
 4. **Amazon S3 Glacier Instant Retrieval**
     - Millisecond retrieval, great for data accessed once a quarter
     - Minimum storage duration of 90 days
+
+5. **Amazon S3 Glacier Flexible Retrieval(formerly amazon s3 glacier)**
+    - Expedited (1 to 5min), standard (3 to 5hrs), Bulk(5 to 12hrs) - free
+    - Minimum storage duration of 90 days.
+
+6. **Amazon S3 Glacier Deep Archive**
+    - Good for long term storage.
+    - Standard(12 hrs), Bulk (48 hrs)
     
-5. Amazon S3 Glacier Flexible Retrieval
-6. Amazon S3 Glacier Deep Archive
 7. Amazon S3 Intelligent Tiering
 
 - **You can use s3 lifecycle configurations to move objects between the classes above.**
