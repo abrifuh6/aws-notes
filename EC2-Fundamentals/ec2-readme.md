@@ -921,8 +921,12 @@ example.com
     - Lower cost than s3 standard but cost on retrieval.
     - 99.99% availability
     - Use case; Disaster Recovery(DR) snd backups.
+
+3. **Amazon S3 One Zone-Infrequent Access**
+    - High durability (99.999%) in a single AZ, data lost when AZ is destroyed
+    - 99.5% availability
+    - Use case; storing secondary backup copies of on-premise data, or data you can recreate.
     
-3. Amazon S3 One Zone-Infrequent Access
 4. Amazon S3 Glacier Instant Retrieval
 5. Amazon S3 Glacier Flexible Retrieval
 6. Amazon S3 Glacier Deep Archive
