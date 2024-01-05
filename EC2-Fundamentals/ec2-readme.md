@@ -965,4 +965,11 @@ example.com
     - Can be used to delete old versions of files(if versioning is enabled)
     - can be used to delete incomplete Multi-Part uploads
   - Rules can be created for certain prfix (example:s3://mybucket/mp3/*)
-  - Rules can be created for certain object Tags (example:Department:Finance) 
+  - Rules can be created for certain object Tags (example:Department:Finance)
+
+### S3 Requester Pays
+
+- We know that in general, buvket owners pay for all s3 storage and data transfer cost associated with their bucket.
+- **With Requester Pays Buckets**, the requester instead of the owner pays for the cost of the request and the data downloadfrom the bucket.
+- Helpful when you want to share large datasets with other accounts.
+- The requester must be authenticated in AWS.(can't be anonymous)
