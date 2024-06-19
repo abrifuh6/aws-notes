@@ -973,3 +973,14 @@ example.com
 - **With Requester Pays Buckets**, the requester instead of the owner pays for the cost of the request and the data downloadfrom the bucket.
 - Helpful when you want to share large datasets with other accounts.
 - The requester must be authenticated in AWS.(can't be anonymous)
+
+
+## Amazon S3 - Object Encryption
+
+Can encrypt objects in s3 using 4 methods.
+- **Server-side Encryption (SSE);**
+  - Server-side encryption with amazon s3-managed Keys(SSE-S3) and it's enabled my default.
+    - Encrypts s3 objects usingkeys handled,managed and owned by AWS.
+  
+  - Server-side Encryption with KMS Keys stored in AWS KMS(SSE-KMS)
+    - Leverages AWS Key management service (AWS KMS) to manage encryption keys.
