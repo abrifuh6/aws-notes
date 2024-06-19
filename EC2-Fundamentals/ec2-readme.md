@@ -984,3 +984,12 @@ Can encrypt objects in s3 using 4 methods.
   
   - Server-side Encryption with KMS Keys stored in AWS KMS(SSE-KMS)
     - Leverages AWS Key management service (AWS KMS) to manage encryption keys.
+
+  - Server-side Encryption with customer provided Keys (SSE-C)
+    - Customers provide thier own keys to use for encryption of objects in s3.
+
+- **Client-Side Encryption**
+
+  - Uae clinet libraries such as Amazon S3 Client-Side Encryption Library.
+  - Clients must encrypt data themselves before sending to Amazon S3 likewise they must decrypt data too before retrieving from S3.
+  - Customer fully manages the keys and ecryption cycle.
