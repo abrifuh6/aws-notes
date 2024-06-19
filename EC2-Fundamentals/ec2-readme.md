@@ -993,3 +993,14 @@ Can encrypt objects in s3 using 4 methods.
   - Uae clinet libraries such as Amazon S3 Client-Side Encryption Library.
   - Clients must encrypt data themselves before sending to Amazon S3 likewise they must decrypt data too before retrieving from S3.
   - Customer fully manages the keys and ecryption cycle.
+
+### Encryption in Transit (SSL/TLS)
+
+  Encryption in flight is also called SSL/TLS.
+
+  -  Amazon S3 exposes 2 endpoints:
+    - HTTP endpoint -non encrypted
+    - HTTPS endpoint - Encrypted
+
+- HTTPS is Recommended
+- HTTPS is mandatory for SSE-C(customer-provided keys).
