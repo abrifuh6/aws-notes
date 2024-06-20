@@ -1004,3 +1004,12 @@ Can encrypt objects in s3 using 4 methods.
 
 - HTTPS is Recommended
 - HTTPS is mandatory for SSE-C(customer-provided keys).
+
+## What is CORS?
+
+Stands for **Cross Origin Resource Sharing** where;
+
+- Origin = scheme(protocol) + host(domain) + port
+  - example: https://www.example.com (implied port is 443 for https, 80 for http)
+
+- Cors is a web browser mechanism to allow requests to other origins while visiting the main origin
