@@ -1013,3 +1013,5 @@ Stands for **Cross Origin Resource Sharing** where;
   - example: https://www.example.com (implied port is 443 for https, 80 for http)
 
 - Cors is a web browser mechanism to allow requests to other origins while visiting the main origin
+
+## MFA Delete
