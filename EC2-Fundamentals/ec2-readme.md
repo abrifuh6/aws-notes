@@ -1015,3 +1015,7 @@ Stands for **Cross Origin Resource Sharing** where;
 - Cors is a web browser mechanism to allow requests to other origins while visiting the main origin
 
 ## MFA Delete
+
+MFA is required to :
+  - Permanently delete an object version
+  - suspend versioning on the buckets
