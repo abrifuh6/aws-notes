@@ -1017,5 +1017,15 @@ Stands for **Cross Origin Resource Sharing** where;
 ## MFA Delete
 
 MFA is required to :
-  - Permanently delete an object version
-  - suspend versioning on the buckets
+
+- Permanently delete an object version
+- suspend versioning on the buckets.
+
+On the Other hand, MFA will not be required to:
+
+- Enable versioning
+- List deleted versions
+
+To use MFA Delete, versioning must be ensbled on the bucket
+
+Only the bucket owner(root account) can enable/disable MFA Delete.
