@@ -1029,3 +1029,11 @@ On the Other hand, MFA will not be required to:
 To use MFA Delete, versioning must be ensbled on the bucket
 
 Only the bucket owner(root account) can enable/disable MFA Delete.
+
+## S3 Access logs.
+
+- For audit purposes, you may want to log all access to s3 buckets.
+
+- Any request made to any account weather accepted or denied will be logged into the logs bucket for the data to be analysed using data analysis tools.
+
+- The target logging bucket must be in the same AWS region.
