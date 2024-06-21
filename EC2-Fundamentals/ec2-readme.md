@@ -1037,3 +1037,10 @@ Only the bucket owner(root account) can enable/disable MFA Delete.
 - Any request made to any account weather accepted or denied will be logged into the logs bucket for the data to be analysed using data analysis tools.
 
 - The target logging bucket must be in the same AWS region.
+
+## S3 Glacier Vault Lock
+
+- Adopt a WORM(Write Once Read Many) model.
+- Create a vault lock policy.
+- Lock the policy from future edits(can't be changed or deleted)
+- Helpful for compliance and data retention.
