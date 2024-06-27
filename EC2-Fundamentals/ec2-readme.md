@@ -1053,3 +1053,6 @@ Only the bucket owner(root account) can enable/disable MFA Delete.
 - **It improves read performance, content is cached at the edge locations.
 - Improves user experience.
 DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
+
+## AWS Storage Extras
+ 
