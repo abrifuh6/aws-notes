@@ -1130,3 +1130,18 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 - **OBJECT**
   - Amazon S3 & Amazon Glacier
+
+## AWS Storage Gateway
+
+- It's a bridge between on-prem data and cloud data
+- Use cases:
+  - disaster recovery
+  - backup and restore
+  - tiered storage
+  - on-prem cache and low latency files access
+
+- Types of storage gateway
+  - S3 file gateway
+  - FSx file gateway
+  - Volume gateway
+  - Tape gateway
