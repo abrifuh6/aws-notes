@@ -1097,3 +1097,5 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 - It's an actual truck, very secured, comes with 24/7 surveillance.
 - Transfer exabytes of data (1exabyte = 1000 petabyte = 1,000,000 Terabytes)
 - Each snowmobile has 100 PB of capacity (use multiple in parallel).
+
+![aws snow family for data migration](/EC2-Fundamentals/Snowball.png)
