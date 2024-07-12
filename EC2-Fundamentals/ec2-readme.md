@@ -1072,4 +1072,11 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 - Physical hardware solution that is used for transporting large data. Could be terabytes or petabytes of data in and out of aws.
 - Good alternative to moving data over the network which can cost you alot in network fees.
-- Pay per data transfer Job.
+- Pay per data transfer Job. 
+- We have 2 kinds: 
+  - **snowball edge storage optimized**(80 TB HDD or 210 TB NVMe for block volume and s3 compatible object storage)
+  - **Snowball edge Compute Optimized**(42 TB HDD r 28 TB NVMe capacity for block volume and s3 compatible object storage)
+- Use cases will be ; 
+  - Data cloud migrations
+  - Data Center Decommissioning
+  - Disaster Recovery
