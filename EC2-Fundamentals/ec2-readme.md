@@ -1177,4 +1177,18 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ## Decoupling Applications: SQS,SNS,Kinesis, Active MQ
 
-## 
+### Introduction
+
+- Forms of communications that we will look at is
+
+**1. Synchronous Communications(Application to Application**
+![synchronous-communication](/EC2-Fundamentals/asynch.png)
+
+**2. Asynchronous/Event based Communications(Application to queue Application**
+![asynchronous-communication](/EC2-Fundamentals/asyn2.png)
+
+- We could face scaling challenges if there is a spike in traffic, in the synchronous model. So in this case, it's better to decouple your application to avoid such. We can use the Asynchronous model using:
+  - SQS: queue model
+  - SNS: Publisher/subscriber model(pub/sub)
+  - Kinesis: Real-rtime streaming model
+- The services above are good because they can scale independently from our application.
