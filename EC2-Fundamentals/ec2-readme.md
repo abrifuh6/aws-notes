@@ -1080,3 +1080,20 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
   - Data cloud migrations
   - Data Center Decommissioning
   - Disaster Recovery
+
+### AWS Snowcone & Snowcone SSD
+
+- This device is small and portable, can withstand harsh environments and also very secure.
+- Light(about 4.5lbs or 2.1kg)
+- Device can be used for edge computing, storage and data transfer.
+- This device comes in 2 flavors
+  - **Snowcone** : 8TB of HDD storage
+  - **Snowcone SSD** : 14TB pf SSD Storage
+- Can be used where snowball does not fit (confined space) but you need to provide your own batteries.
+- Can be sent back to AWS offline or connect to internet and use AWS DataSync to send data.
+
+## AWS SnowMobile
+
+- It's an actual truck, very secured, comes with 24/7 surveillance.
+- Transfer exabytes of data (1exabyte = 1000 petabyte = 1,000,000 Terabytes)
+- Each snowmobile has 100 PB of capacity (use multiple in parallel).
