@@ -1066,4 +1066,10 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 - Edge Computing:
   - snowcone
-  - snoballl edge
+  - snowballl edge
+
+### Snowball Edge (for data transfers)
+
+- Physical hardware solution that is used for transporting large data. Could be terabytes or petabytes of data in and out of aws.
+- Good alternative to moving data over the network which can cost you alot in network fees.
+- Pay per data transfer Job.
