@@ -1056,3 +1056,14 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ## AWS Storage Extras
  
+### Aws Snow Family 
+
+- Highly secure and portable devices that is used by aws to collect and process data at the egde and for data migration in and out of aws.
+- For Data migration, we can use 
+  - snowcone,
+  - snowball Edge,
+  - Snownobile
+
+- Edge Computing:
+  - snowcone
+  - snoballl edge
