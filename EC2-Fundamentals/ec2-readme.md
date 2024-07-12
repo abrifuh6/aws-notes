@@ -1192,3 +1192,20 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
   - SNS: Publisher/subscriber model(pub/sub)
   - Kinesis: Real-rtime streaming model
 - The services above are good because they can scale independently from our application.
+
+### Amazon SQS
+
+**What is a Queue?**
+
+- Producers send messages to the queue and the consumers poll messages from the queue and deletes the message from the queue.
+
+![sqs-queue](/EC2-Fundamentals/sqs-queue.png)
+
+- The oldest AWS offering
+- Fully managed service, used to decouple applications
+
+Some of the things to take note of are
+
+- Unlimited throughput,unlimited number of messages in queue
+- Default retenstion of messages is 4days & max of 14days
+- Very low latency and has a limit of 256kB per message sent.
