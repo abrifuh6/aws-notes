@@ -1099,3 +1099,13 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 - Each snowmobile has 100 PB of capacity (use multiple in parallel).
 
 ![aws snow family for data migration](/EC2-Fundamentals/Snowball.png)
+
+## Amazon FSx - Overview
+
+- This is a 3rd party high-performance file systems on AWS
+- Fully managed service
+- Examples include;
+  - FSx for Lustre
+  - FSx for Windows File Server
+  - FSx for NetApp ONTAP
+  - FSx for OpenZFS
