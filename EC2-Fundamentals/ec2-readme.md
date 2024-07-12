@@ -1145,3 +1145,11 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
   - FSx file gateway
   - Volume gateway
   - Tape gateway
+
+### AWS Transfer Family
+
+- A fully-managed service for file transfers into and out of Amazon S3 or amazon EFS using FTP protocol
+- Supported protocols include
+  - AWS Transfer for FTP ( File Transfer Protocol)
+  - AWS Transfer for FTPS ( File Transfer protocol over SSL (FTPS))
+  - AWS Transfer for SFTP ( Secure File Transfer Protocol (SFTP))
