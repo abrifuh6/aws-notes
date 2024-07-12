@@ -1100,7 +1100,7 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ![aws snow family for data migration](/EC2-Fundamentals/Snowball.png)
 
-## Amazon FSx - Overview
+### Amazon FSx - Overview
 
 - This is a 3rd party high-performance file systems on AWS
 - Fully managed service
@@ -1109,3 +1109,24 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
   - FSx for Windows File Server
   - FSx for NetApp ONTAP
   - FSx for OpenZFS
+
+## Hybrid Cloud for Storage
+
+- AWS is starting to push for "hybrid cloud".
+- Reasons for this can be
+  - Long cloud migration time
+  - Security Requirements
+  - Compliance requirements
+  - IT strategy
+- S3 is a proprietary storage technology (unlike EFS/NFS), so how do you expose the S3 data on-prem? **AWS Storage Gateway**
+
+### AWS Storage Cloud Native Options
+
+- **BLOCK**
+  - Amazon EBS & EC2 instance store
+
+- **FILE**
+  - Amazon EFS & Amazon FSx
+
+- **OBJECT**
+  - Amazon S3 & Amazon Glacier
