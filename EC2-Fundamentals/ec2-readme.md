@@ -1171,3 +1171,6 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 - Replication task can be scheduled hourly,daily,weekly
 - Has the ability to keep file permissions and metadata are preserved (NFS POSIX,SMB)
 - One agent task can use 10Gbps and you can setup a bandwidth limit.
+
+![storage-compare](/EC2-Fundamentals/storage-compare.png)
+
