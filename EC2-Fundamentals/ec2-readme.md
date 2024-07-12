@@ -1153,3 +1153,8 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
   - AWS Transfer for FTP ( File Transfer Protocol)
   - AWS Transfer for FTPS ( File Transfer protocol over SSL (FTPS))
   - AWS Transfer for SFTP ( Secure File Transfer Protocol (SFTP))
+- Managed infrasture, scalable, Reliable, Highly available (multi-AZ)
+- Pay per provisioned endpoint per hr plus data transfers in GB
+- Store and manage users credentials within the service.
+- Can integrate with existing authentication systems (MicroSoft Active Directory, LDAP, OKta, Amazon Cognito, Custom)
+- Usage: Sharing Files, public datasets, CRM, ERP
