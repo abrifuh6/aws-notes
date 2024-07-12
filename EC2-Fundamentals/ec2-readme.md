@@ -1174,3 +1174,7 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ![storage-compare](/EC2-Fundamentals/storage-compare.png)
 
+
+## Decoupling Applications: SQS,SNS,Kinesis, Active MQ
+
+## 
