@@ -1158,3 +1158,16 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 - Store and manage users credentials within the service.
 - Can integrate with existing authentication systems (MicroSoft Active Directory, LDAP, OKta, Amazon Cognito, Custom)
 - Usage: Sharing Files, public datasets, CRM, ERP
+
+## AWS DataSync
+
+- Move large amount of data to and from
+  - on-prem / other cloud to AWS (NFS, SMB, HDFS, S3 API) and needs an agent to run on-prem or the other cloud.
+  - AWS to AWS (different storage services) requires no agent.
+- Can synchronize to:
+  - Amazon S3 (any storage classes - including glacier)
+  - Amazon EFS
+  - Amazon FSx (windows, lustre, NetApp, OpenZFS)
+- Replication task can be scheduled hourly,daily,weekly
+- Has the ability to keep file permissions and metadata are preserved (NFS POSIX,SMB)
+- One agent task can use 10Gbps and you can setup a bandwidth limit.
