@@ -1253,8 +1253,14 @@ Insert the messages pulled from SQS into a database.
 
 ### SQS - Security
 
-**- Encryption**
+- Encryption
+  - We have in-flight ecryption using HTTPS API
+  - At-rest encryption using KMS keys
+  - Client-side encryption if the client wants to perform encryption/decryption itself but its not provide by AWS out-of-the-box.  
 
-- We have in-flight ecryption using HTTPS API
-- At-rest encryption using KMS keys
-- Client-side encryption if the client wants to perform encryption/decryption itself but its not provide by AWS out-of-the-box.  
+- Access Controls:
+  - IAM Policies are available to regulate access to the SQS API
+
+- SQS Access Policies(Similare to S3 bucket policies)
+  - Useful for cross-account access to SQS queues
+  - Useful for allowing other services (SNS,S3) to write to an SQS queue.
