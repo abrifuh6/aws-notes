@@ -860,12 +860,11 @@ example.com
   - *Tiers:* Web Server Environment Tier & Worker Environment Tier
   - One can also create multiple environments(dev,test,prod,..)
 
-
 ![beanstalk](/IAM%20and%20AWS%20CLI/beanstalk.png)
 
 ## Amazon S3
 
-### Use cases:
+### Use cases
 
 - For backup and storage
 - Disaster Recovery
@@ -974,10 +973,10 @@ example.com
 - Helpful when you want to share large datasets with other accounts.
 - The requester must be authenticated in AWS.(can't be anonymous)
 
-
 ## Amazon S3 - Object Encryption
 
 Can encrypt objects in s3 using 4 methods.
+
 - **Server-side Encryption (SSE);**
   - Server-side encryption with amazon s3-managed Keys(SSE-S3) and it's enabled my default.
     - Encrypts s3 objects usingkeys handled,managed and owned by AWS.
@@ -998,9 +997,9 @@ Can encrypt objects in s3 using 4 methods.
 
   Encryption in flight is also called SSL/TLS.
 
-  -  Amazon S3 exposes 2 endpoints:
-    - HTTP endpoint -non encrypted
-    - HTTPS endpoint - Encrypted
+- Amazon S3 exposes 2 endpoints:
+  - HTTP endpoint -non encrypted
+  - HTTPS endpoint - Encrypted
 
 - HTTPS is Recommended
 - HTTPS is mandatory for SSE-C(customer-provided keys).
@@ -1010,7 +1009,7 @@ Can encrypt objects in s3 using 4 methods.
 Stands for **Cross Origin Resource Sharing** where;
 
 - Origin = scheme(protocol) + host(domain) + port
-  - example: https://www.example.com (implied port is 443 for https, 80 for http)
+  - example: <https://www.example.com> (implied port is 443 for https, 80 for http)
 
 - Cors is a web browser mechanism to allow requests to other origins while visiting the main origin
 
@@ -1030,7 +1029,7 @@ To use MFA Delete, versioning must be ensbled on the bucket
 
 Only the bucket owner(root account) can enable/disable MFA Delete.
 
-## S3 Access logs.
+## S3 Access logs
 
 - For audit purposes, you may want to log all access to s3 buckets.
 
@@ -1045,7 +1044,7 @@ Only the bucket owner(root account) can enable/disable MFA Delete.
 - Lock the policy from future edits(can't be changed or deleted)
 - Helpful for compliance and data retention.
 
-## AWS CloudFront And AWS Global Accelerator.
+## AWS CloudFront And AWS Global Accelerator
 
 ### What is AWS Cloudfront?
 
@@ -1055,11 +1054,11 @@ Only the bucket owner(root account) can enable/disable MFA Delete.
 DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ## AWS Storage Extras
- 
-### Aws Snow Family 
+
+### Aws Snow Family
 
 - Highly secure and portable devices that is used by aws to collect and process data at the egde and for data migration in and out of aws.
-- For Data migration, we can use 
+- For Data migration, we can use
   - snowcone,
   - snowball Edge,
   - Snownobile
@@ -1072,11 +1071,11 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 - Physical hardware solution that is used for transporting large data. Could be terabytes or petabytes of data in and out of aws.
 - Good alternative to moving data over the network which can cost you alot in network fees.
-- Pay per data transfer Job. 
-- We have 2 kinds: 
+- Pay per data transfer Job.
+- We have 2 kinds:
   - **snowball edge storage optimized**(80 TB HDD or 210 TB NVMe for block volume and s3 compatible object storage)
   - **Snowball edge Compute Optimized**(42 TB HDD r 28 TB NVMe capacity for block volume and s3 compatible object storage)
-- Use cases will be ; 
+- Use cases will be ;
   - Data cloud migrations
   - Data Center Decommissioning
   - Disaster Recovery
@@ -1174,7 +1173,6 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 
 ![storage-compare](/EC2-Fundamentals/storage-compare.png)
 
-
 ## Decoupling Applications: SQS,SNS,Kinesis, Active MQ
 
 ### Introduction
@@ -1212,3 +1210,30 @@ Some of the things to take note of are
 - Very low latency (< 10ms on publish and recieve )
 - Messages can be delivered twice or duplicate messages(at least once on delivery)
 - Can have out of order messages(best effort offering)
+
+### SQS -Producer (Producing Messages)
+
+- Messages are produced by producers to SQS using the SDK(Software Developement Kit) through an API called *"SendMessage API"*
+- The message is then persisted in SQS until a *consumer* reads, processes and deletes  the message.
+
+**Use Case**
+
+Send an order to be processed
+
+- Order id
+- Customer id
+- Any attributes you want
+
+*- SQS standard has unlimited throughput.*
+
+### SQS -Consumers (Consuming Messages)
+
+- Consumers are applications that you write with code,
+- These consumers can be running on EC2 Instances, Servers, or AWS Lambda
+- Consumers can poll up to 10 messages from SQS at a time.
+
+**Use Case**
+
+Insert the messages pulled from SQS into a database.
+
+![sqs-consumer](/EC2-Fundamentals/sqs-consumer.png)
