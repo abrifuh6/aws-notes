@@ -1231,9 +1231,11 @@ Send an order to be processed
 - Consumers are applications that you write with code,
 - These consumers can be running on EC2 Instances, Servers, or AWS Lambda
 - Consumers can poll up to 10 messages from SQS at a time.
+- Once the consumer processes the message, the message is deleted(Unsing the *DeleteMessage API*) so that no other consumer is able to see the message and the process is complete.
 
 **Use Case**
 
 Insert the messages pulled from SQS into a database.
 
 ![sqs-consumer](/EC2-Fundamentals/sqs-consumer.png)
+
