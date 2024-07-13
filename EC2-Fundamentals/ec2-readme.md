@@ -1239,15 +1239,22 @@ Insert the messages pulled from SQS into a database.
 
 ![sqs-consumer](/EC2-Fundamentals/sqs-consumer.png)
 
-
 ### SQS - Multiple EC2 Instaces As Consumers
 
 - In this case, consumers receive and process messages in parallel to one an0ther using a poll function.
-- If once consumer delays in receiving a message, another consumer will receive it. 
+- If once consumer delays in receiving a message, another consumer will receive it.
 - We can scale consumers horizontally to improve throughput of processing.
-- This also means that we are able to integrate SQS with our Auto Scaling Group(ASG). 
+- This also means that we are able to integrate SQS with our Auto Scaling Group(ASG).
   - Consumers will be running on instances inside an ASG.
   - Your ASG has to be scaling on some kind of metric. One of the metric we can configure is called *queue length*. Its a Cloudwatch Metric(approximate number of messages).
 - We can setup a cloudwatch alarm when a threshold is met, so that the alarm can trigger the ASG to scale our consumers(instances) up or down.
 
 ![SQS-ASG](/EC2-Fundamentals/asg-sqs.png)
+
+### SQS - Security
+
+**- Encryption**
+
+- We have in-flight ecryption using HTTPS API
+- At-rest encryption using KMS keys
+- Client-side encryption if the client wants to perform encryption/decryption itself but its not provide by AWS out-of-the-box.  
