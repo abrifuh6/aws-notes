@@ -1207,5 +1207,8 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 Some of the things to take note of are
 
 - Unlimited throughput,unlimited number of messages in queue
-- Default retenstion of messages is 4days & max of 14days
+- Default retention of messages is 4days & max of 14days
 - Very low latency and has a limit of 256kB per message sent.
+- Very low latency (< 10ms on publish and recieve )
+- Messages can be delivered twice or duplicate messages(at least once on delivery)
+- Can have out of order messages(best effort offering)
