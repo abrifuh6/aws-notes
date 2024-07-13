@@ -1264,3 +1264,14 @@ Insert the messages pulled from SQS into a database.
 - SQS Access Policies(Similare to S3 bucket policies)
   - Useful for cross-account access to SQS queues
   - Useful for allowing other services (SNS,S3) to write to an SQS queue.
+
+### SQS Visibilty Timeout
+
+- After a message is polled by the consumer, it becomes invisible to other consumers after a particular time(default is 30seconds.)
+- If the messages are not processed during the visibily time-out, it will be processed twice.
+- Consumer can call the *ChangeMessageVisibilty* API to get more time.
+if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take time.
+- If visibilty is too low(seconds) we may get duplicates
+
+![message-visibilty](/EC2-Fundamentals/msg-vis.png)
+
