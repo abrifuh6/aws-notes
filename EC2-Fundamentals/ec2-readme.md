@@ -1290,3 +1290,11 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 ![SNS-2](/EC2-Fundamentals/sns-2.png)
 
 **- One important point to note is that many aws services can send data directly to SNS for notifications.
+
+### SNS + SQS: Fan Out
+
+- Push once in SNS, receive in all SQS queues that are subscribers.
+- Fully decoupled, no data loss
+- SQS allows for data persistence, delayed processing and retries of work.
+- Ability to add more SQS subscribers over time.
+- Make sure your SQS queue access policy allows for SNS to write
