@@ -1298,3 +1298,13 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 - SQS allows for data persistence, delayed processing and retries of work.
 - Ability to add more SQS subscribers over time.
 - Make sure your SQS queue access policy allows for SNS to write
+- Cross-Region delivery if the security rules allows it, hence can work with SNS queues in other regions.
+
+![fan-out](/EC2-Fundamentals/fan-out.png)
+
+### SNS Message Filtering
+
+- It's a  JSON policy used to filter messages sent to SNS topics's subsriptions.
+- If a subscription doesn't have a filter policy, it receives every message.
+
+![filtering-messages](/EC2-Fundamentals/filtering.png)
