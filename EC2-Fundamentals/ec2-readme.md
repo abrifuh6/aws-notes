@@ -1275,3 +1275,18 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 
 ![message-visibilty](/EC2-Fundamentals/msg-vis.png)
 
+
+### Amazon SNS(Simple Notification Service)
+
+- Good use case will be if you want to send one message to many receivers. Example will be a buying service wanting to send notification to multiple services.
+![sns-topic](/EC2-Fundamentals/pub-sub-sns.png)
+
+- The "event producer" sends only one message to one SNS topic
+- We can have as many "event receivers"(subscriptions) as we want to listen to the SNS topic notifications
+- Each subscriber to the topic will get all the messages (there's a new feature to filter messages)
+- Can have up to 12.5million subscriptions per topic.
+- 100,000 SNS topic limit.
+
+![SNS-2](/EC2-Fundamentals/sns-2.png)
+
+**- One important point to note is that many aws services can send data directly to SNS for notifications.
