@@ -1308,3 +1308,16 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 - If a subscription doesn't have a filter policy, it receives every message.
 
 ![filtering-messages](/EC2-Fundamentals/filtering.png)
+
+### Amazon Kinesis
+
+- Makes it easy to collect, process and analyze streaming data in real time.
+- This could be application logs, metrics, website clickstreams, IoT telemetary data.
+
+- we have about 4 services under kinesis
+  - **Kinesis Data Streams** to capture, process and store data streams
+  - **Kinesis Data Firehost** to load data streams into AWS data stores.
+  - **Kinesis Data Analytics** to analyze data streams with SQL or Apache Flink
+  - **kinesis Video Streams** to capture, process and store video streams.
+
+### i. Kinesis Data Streams
