@@ -1321,3 +1321,5 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
   - **kinesis Video Streams** to capture, process and store video streams.
 
 ### i. Kinesis Data Streams
+
+docker swarm
