@@ -1352,3 +1352,11 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
   - Default capacity provisioned (4 MB/s in or 4000 records per second)
   - Scales automatically based on observed throughput peak during the last 30days.
   - You pay per stream per hour and data in/out per GB.
+
+### Kinesis Data Streams Security
+
+- Can control access using IAM policies
+- Ecryption of data in flight using HTTPS and at rest using KMS,
+- Can impliment encryption/decryption of data on client side but it's difficult.
+- VPC endpoints available to kinesis to access within VPC.
+- Monitor API calls using cloudtrail.
