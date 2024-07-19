@@ -1339,3 +1339,16 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
   - you can write your own Kinesis client Library(KCL), AWS SDK
   - Managed: AWS Lambda, Kinesis Data Firehose, Kinesis Data Analytics.
 
+### Capacity Mode in Kinesis Data Streams
+
+- **Provisioned Mode:**
+  - You can choose the number of shards you want provisioned, scaled manually or using API.
+  - Each shard gets 1MB/s in (or 1000 records per second)
+  - Each shard can get 2MB/s out (classic or enhanced fan-out consumer)
+  - You pay per shard provisioned per hour.
+
+- **On-Demand Mode:**
+  - No need for you to provision or manage the capacity
+  - Default capacity provisioned (4 MB/s in or 4000 records per second)
+  - Scales automatically based on observed throughput peak during the last 30days.
+  - You pay per stream per hour and data in/out per GB.
