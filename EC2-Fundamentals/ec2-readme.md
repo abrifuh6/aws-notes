@@ -1316,7 +1316,7 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 
 - we have about 4 services under kinesis
   - **Kinesis Data Streams** to capture, process and store data streams
-  - **Kinesis Data Firehost** to load data streams into AWS data stores.
+  - **Kinesis Data Firehose** to load data streams into AWS data stores.
   - **Kinesis Data Analytics** to analyze data streams with SQL or Apache Flink
   - **kinesis Video Streams** to capture, process and store video streams.
 
@@ -1324,4 +1324,11 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 
   Uses a method called sharding(a process of storing large database across multiple machines).
 
-  ###
+![kinesis-data-stream](/EC2-Fundamentals/kds.png)
+
+- Retention of data by producers is between 1 to 365days
+- Has the ability to replay data
+- Once data is introduced to kinesis, it cannot be deleted(immutabilty)
+- Data that have the same partition keys goes to the same shard
+( [For more info on Database Sharding - AWS](https://aws.amazon.com/what-is/database-sharding/)
+ )
