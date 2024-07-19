@@ -1332,3 +1332,10 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 - Data that have the same partition keys goes to the same shard
 ( [For more info on Database Sharding - AWS](https://aws.amazon.com/what-is/database-sharding/)
  )
+- Data that shares same partition keys goes to the same shard.
+- **Producers** i.e
+  - AWS SDK, Kinesis Producer Library (KPL), kinesis agent.
+- For **Consumers** i.e
+  - you can write your own Kinesis client Library(KCL), AWS SDK
+  - Managed: AWS Lambda, Kinesis Data Firehose, Kinesis Data Analytics.
+
