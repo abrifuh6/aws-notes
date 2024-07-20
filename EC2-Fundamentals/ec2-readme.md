@@ -1360,3 +1360,11 @@ if visibilty timeout is high(hrs) and consumer crashes,reprocessing will take ti
 - Can impliment encryption/decryption of data on client side but it's difficult.
 - VPC endpoints available to kinesis to access within VPC.
 - Monitor API calls using cloudtrail.
+
+### Kinesis Data Firehose
+
+Amazon Data Firehose provides the easiest way to acquire, transform, and deliver data streams within seconds to data lakes, data warehouses, and analytics services
+
+![kinesis-firehost](/EC2-Fundamentals/firehost.png)
+
+- Fully managed service,
