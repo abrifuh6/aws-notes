@@ -1433,3 +1433,4 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Launch docker containers on AWS.
 - It's managed by AWS, you do not need to manage the underlying infrastructure(serverless)
 - You create the task definitions and AWS runs the task for you based on the CPU/RAM needed.
+- You can scale quickly by increasing the number of task.
