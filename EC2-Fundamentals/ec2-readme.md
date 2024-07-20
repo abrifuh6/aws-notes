@@ -1448,3 +1448,11 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
   - Task role is defined in the task definition. 
 
 ![ecs-launch-type](/EC2-Fundamentals/ecs-2.png)
+
+### ECS Service Auto Scaling
+
+- Can automatically increase/decrease the desired number of ECS tasks
+- ECS auto scaling uses AWS application Auto Scaling. Scaling can be done in 3ways
+  - ecs service average CPU utilization
+  - ecs service average Memory utilization - Scale on RAM
+  - ALP request count per target -metric comes from alb
