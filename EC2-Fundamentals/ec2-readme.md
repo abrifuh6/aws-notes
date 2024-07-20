@@ -1396,3 +1396,12 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 
 - We have no data ordering in SQS.
 - For SQS FIFO, if you don't use a *group ID*, messages are consumed in a first-come first-serve bases with only one consumer.
+
+### Amazon MQ
+
+- Applications on-prem may use traditional protocols such as MQTT, AMQP, STOMP, Openwire, WSS. 
+- Companies may want to use the same protocols when migrating to the cloud rather than use the SNS and SQS APIs. AWS makes this possible by offering Amazon MQ,
+- Amazon MQ is a managed message broker service for RabbitMQ and ActiveMQ.
+- It doesn't scale like SNS and SQS.
+- It runs on servers and can run in multi-AZ with failover.
+- It cames both with queue feature like SQS and topic features like SNS
