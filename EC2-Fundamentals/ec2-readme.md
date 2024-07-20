@@ -1420,10 +1420,16 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - It's integrated with both AWS and third-party tools, such as Amazon Elastic Container Registry and Docker. This integration makes it easier for teams to focus on building the applications, not the environment.
 - You can run and scale your container workloads across AWS Regions in the cloud, and on-premises, without the complexity of managing a control plane.
 
-### Launch Type
+### Launch Type - EC2 Instances
 
 - Launch Docker Containers on AWS = Launch ECS Tasks  on ECS Clusters
 - EC2 Launch Type; you must provision and maintain the infra.(ec2 instances which should all have ECS agents running on it, so that it can be registered to the ECS Cluster.)
 - AWS takes care of starting and stopping the containers. 
 
 ![launch-type](/EC2-Fundamentals/launch-type.png)
+
+### Launch Type - Fargate(serverless)
+
+- Launch docker containers on AWS.
+- It's managed by AWS, you do not need to manage the underlying infrastructure(serverless)
+- You create the task definitions and AWS runs the task for you based on the CPU/RAM needed.
