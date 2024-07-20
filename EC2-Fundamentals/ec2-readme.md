@@ -1404,4 +1404,8 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Amazon MQ is a managed message broker service for RabbitMQ and ActiveMQ.
 - It doesn't scale like SNS and SQS.
 - It runs on servers and can run in multi-AZ with failover.
-- It cames both with queue feature like SQS and topic features like SNS
+- It cames both with queue feature like SQS and topic features like SNS.
+
+### High Availabilty in Amazon MQ.
+
+![ha-Amazon MQ](/EC2-Fundamentals/ha-MQ.png)
