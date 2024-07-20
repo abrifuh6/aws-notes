@@ -1373,3 +1373,7 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
   - custom HTTP endpoint or HTTP endpoints owned by supported third-party service providers, including Datadog, Dynatrace, LogicMonitor, MongoDB, New Relic, Coralogix, and Elastic.
 - With Amazon Data Firehose, you don't need to write applications or manage resources. You configure your data producers to send data to Amazon Data Firehose, and it automatically delivers the data to the destination that you specified.
 - You can also configure Amazon Data Firehose to transform your data before delivering it.
+
+### Differences between Kinesis Data Streams and Firehose
+
+![Data stream vs firehose](/EC2-Fundamentals/ds-firehorse.png)
