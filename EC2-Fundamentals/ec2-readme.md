@@ -1434,3 +1434,17 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - It's managed by AWS, you do not need to manage the underlying infrastructure(serverless)
 - You create the task definitions and AWS runs the task for you based on the CPU/RAM needed.
 - You can scale quickly by increasing the number of task.
+
+### IAM Roles For ECS
+
+- **For EC2 Instance Profile(EC2 Launch Type Only)**:
+  - Used by the ECS agent only to make api calls to the ECS service.
+  - Sends container logs  to cloudwatch logs.
+  - Pulls docker images from ECR and references sensitive data in Secrets Manager or SSM Parameter store.
+
+- **For ECS Task Role**:
+  - Allows each task to have a specific role and 
+  - Uses different roles for the different ECS services you run
+  - Task role is defined in the task definition. 
+
+![ecs-launch-type](/EC2-Fundamentals/ecs-2.png)
