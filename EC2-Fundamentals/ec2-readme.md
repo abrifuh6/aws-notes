@@ -1367,7 +1367,7 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 
 ![kinesis-firehost](/EC2-Fundamentals/firehost.png)
 
-- Amazon Data Firehose is a fully managed service for delivering real-time streaming data to destinations such as 
+- Amazon Data Firehose is a fully managed service for delivering real-time streaming data( [read more](https://aws.amazon.com/what-is/streaming-data/) ) to destinations such as 
   - Amazon Simple Storage Service (Amazon S3), Amazon Redshift, Amazon OpenSearch Service, Amazon OpenSearch Serverless,
   - Splunk, and any 
   - custom HTTP endpoint or HTTP endpoints owned by supported third-party service providers, including Datadog, Dynatrace, LogicMonitor, MongoDB, New Relic, Coralogix, and Elastic.
