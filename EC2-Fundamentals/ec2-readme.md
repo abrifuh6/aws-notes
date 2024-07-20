@@ -1188,7 +1188,7 @@ DDoS protection(because its worldwide),also integrated with shield, AWS WAF.
 - We could face scaling challenges if there is a spike in traffic, in the synchronous model. So in this case, it's better to decouple your application to avoid such. We can use the Asynchronous model using:
   - SQS: queue model
   - SNS: Publisher/subscriber model(pub/sub)
-  - Kinesis: Real-rtime streaming model
+  - Kinesis: Real-time streaming model
 - The services above are good because they can scale independently from our application.
 
 ### Amazon SQS
@@ -1241,7 +1241,7 @@ Insert the messages pulled from SQS into a database.
 
 ### SQS - Multiple EC2 Instaces As Consumers
 
-- In this case, consumers receive and process messages in parallel to one an0ther using a poll function.
+- In this case, consumers receive and process messages in parallel to one another using a poll function.
 - If once consumer delays in receiving a message, another consumer will receive it.
 - We can scale consumers horizontally to improve throughput of processing.
 - This also means that we are able to integrate SQS with our Auto Scaling Group(ASG).
@@ -1409,3 +1409,9 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 ### High Availabilty in Amazon MQ.
 
 ![ha-Amazon MQ](/EC2-Fundamentals/ha-MQ.png)
+
+## Containers on AWS(ECS, Fargate, ECR & EKS)
+
+### Amazon ECS(Elastic Container Service)
+
+
