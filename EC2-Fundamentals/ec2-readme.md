@@ -1377,3 +1377,22 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 ### Differences between Kinesis Data Streams and Firehose
 
 ![Data stream vs firehose](/EC2-Fundamentals/ds-firehorse.png)
+
+
+### Ordering data into Kinesis
+
+**Scenario**
+
+- You have multiple trucks(about 5 trucks) on the road sending their ETA to AWS regularly.
+- You want to consume the data from each truck in an orderly manner so that you can track their movement. How should you send the data into Kinesis?
+
+**Answer**
+
+- Use *"Partition key"* with the value being the *"truck id"* because the same key will always go to the same shard.
+
+![order data in kinesis](/EC2-Fundamentals/order-kinesis.png)
+
+### Ordering data into SQS
+
+- We have no data ordering in SQS.
+- For SQS FIFO, if you don't use a *group ID*, messages are consumed in a first-come first-serve bases with only one consumer.
