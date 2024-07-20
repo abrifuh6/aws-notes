@@ -1414,4 +1414,16 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 
 ### Amazon ECS(Elastic Container Service)
 
+  Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications.
+  
+- As a fully managed service, Amazon ECS comes with AWS configuration and operational best practices built-in.
+- It's integrated with both AWS and third-party tools, such as Amazon Elastic Container Registry and Docker. This integration makes it easier for teams to focus on building the applications, not the environment.
+- You can run and scale your container workloads across AWS Regions in the cloud, and on-premises, without the complexity of managing a control plane.
 
+### Launch Type
+
+- Launch Docker Containers on AWS = Launch ECS Tasks  on ECS Clusters
+- EC2 Launch Type; you must provision and maintain the infra.(ec2 instances which should all have ECS agents running on it, so that it can be registered to the ECS Cluster.)
+- AWS takes care of starting and stopping the containers. 
+
+![launch-type](/EC2-Fundamentals/launch-type.png)
