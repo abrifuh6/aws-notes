@@ -1460,4 +1460,14 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Step Scaling based on the specified cloudwatch alarm
 - Scheduled Scaling based on a specified date/time (predictable changes)
 
-### Amazon 
+### Amazon ECR(Elastic Container Registry)
+
+- Stores and manage docker images on AWS
+- Has both private and public cloud repos(Amazon ECR Public Galery)
+- Fully integrated with ECS and backed by S3
+- Access control through IAM Role
+- Supports imaged vulnerability scanning, versioning, image tags, image lifecycle.
+
+### Amazon EKS(Elastic Kubernetes System)
+
+
