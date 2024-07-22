@@ -1488,3 +1488,25 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - **AWS Fargate**
   - No maintainance required because it's a wireless solution, no nodes are being managed.
 
+### Data Volumes on EKS
+
+- You need to specify *StorageClass* to your EKS cluster
+- Leverages a container Storage interface(CSI) compliant driver
+- Can support:
+  Amazon EBS
+  Amazon EFS(works with Fargate)
+  Amazon FSx for Lustre
+  Amazon FSx for NetApp ONTAP 
+
+### AWS App Runner
+
+- Fully managed web service that makes it very easy to deploy web apps and APIs at scale.
+- Don't need any infrastructure experience.
+- Start with your source code or container image
+- Automatically build and deploy the web app
+- Automatic scaling, highly available, load balancing, ecryption.
+- VPC access support
+- Connect to database, cache, and message queue services
+- Use cases: web apps, APIs microservices, rapid production deployments.
+
+
