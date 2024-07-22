@@ -1470,4 +1470,21 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 
 ### Amazon EKS(Elastic Kubernetes System)
 
+- Similar to ECS but different API
+- Supports 2 launch modes: EC2 launch modes line instances or wireless launch modes like Fargate to deploy to serverless containers.
+
+### Amazon EKS Node Types
+
+- **Managed Node Groups**
+  - Creates and manages the node(EC2 instances) for you.
+  - Part of an ASG managed by EKS
+  - Supports On-Demand and Spot Instances
+
+- **Self-Managed Nodes**
+  - Nodes are created you and registered to the EKS cluster and managed by an ASG
+  - You can use pre build AMI Amazon EKS Optimized AMI
+  - Supports On-Demand or spot instances
+
+- **AWS Fargate**
+  - No maintainance required because it's a wireless solution, no nodes are being managed.
 
