@@ -1452,7 +1452,12 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 ### ECS Service Auto Scaling
 
 - Can automatically increase/decrease the desired number of ECS tasks
-- ECS auto scaling uses AWS application Auto Scaling. Scaling can be done in 3ways
+- ECS auto scaling uses **AWS application Auto Scaling**. Scaling can be done in 3ways
   - ecs service average CPU utilization
   - ecs service average Memory utilization - Scale on RAM
   - ALP request count per target -metric comes from alb
+- Target Tracking: will scale based on the value for a specific cloudwatch metric.
+- Step Scaling based on the specified cloudwatch alarm
+- Scheduled Scaling based on a specified date/time (predictable changes)
+
+### Amazon 
