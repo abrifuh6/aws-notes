@@ -1510,3 +1510,21 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Use cases: web apps, APIs microservices, rapid production deployments.
 
 
+## AWS Lambda
+
+### Why Lambda?
+
+- Are virtual functions -no servers to manage.
+- Limited by time; shorter executions (15mins)
+- Runs on demand, The only run when the have been invoked.
+- Scaling is automated.
+
+### Benefits of Lambda
+
+- The pricing is easy:
+  - Pay per request and compute time
+  - Free tier of 1million AWS lambda requests and 400,000GBs of compute time.
+- Integrated with the whole suite of services
+- Integrated with many programing languages
+- Easy monitoring through AWS CloudWatch
+- Easy to get more resources per functions (up to 10GB of RAM)
