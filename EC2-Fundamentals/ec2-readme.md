@@ -1527,4 +1527,19 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Integrated with the whole suite of services
 - Integrated with many programing languages
 - Easy monitoring through AWS CloudWatch
-- Easy to get more resources per functions (up to 10GB of RAM)
+- Easy to get more resources per functions (up to 10GB of RAM).
+ Increasing the RAM, will also improve CPU and network.
+
+### AWS Lambda Language support
+
+- Node.js(JavaScript)
+- Python
+- Java (java8 compatible)
+- C# (.Net Core)
+- Golang
+- C# / Powershell
+- Ruby
+- Custom Runtime API (community supported, example Rust)
+- Lambda container image
+  - The container image must impliment the lambda Runtime API
+  - ECS / Fargate is preferred for running arbitrary Docker images
