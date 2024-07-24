@@ -1310,6 +1310,3 @@ Can encrypt objects in S3 using four methods.
 - **EC2 Instances:** Provision and maintain infrastructure (EC2 instances with ECS agents).
 - **Fargate (Serverless):** Managed by AWS, no need to manage underlying infrastructure.
 
----
-
-This version includes engaging formatting, sections, and visuals to make it more user-friendly and visually appealing.
