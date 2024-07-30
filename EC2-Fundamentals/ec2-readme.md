@@ -1542,3 +1542,7 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Lambda container image
   - The container image must impliment the lambda Runtime API
   - ECS / Fargate is preferred for running arbitrary Docker images
+
+### Lambda SnapStart
+
+- AWS Lambda SnapStart is a feature designed to improve the startup performance of Lambda functions, particularly for those with long initialization times. SnapStart achieves this by creating a snapshot of a Lambda function's execution environment after it has been initialized, which can then be used to quickly start new instances of the function.
