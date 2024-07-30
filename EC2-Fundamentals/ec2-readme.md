@@ -1509,7 +1509,6 @@ Amazon Data Firehose provides the easiest way to acquire, transform, and deliver
 - Connect to database, cache, and message queue services
 - Use cases: web apps, APIs microservices, rapid production deployments.
 
-
 ## AWS Lambda
 
 ### Why Lambda?
